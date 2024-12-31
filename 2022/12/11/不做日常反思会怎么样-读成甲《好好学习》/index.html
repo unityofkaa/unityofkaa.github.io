@@ -1,37 +1,331 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="读成甲《好好学习》，带着几个问题思考，亦即思考他人经验于已有何复用之处，或者是有何启发 如何陷入“低水平勤奋陷进” 忽视价值，盲目追求量，每年读个100本书，写10w行easy代码，只求舒适圈量的输入而不去思考有何价值产出 忽视关联，不去深究本质，不去链接已有知识 忽视输出，只摘抄不复述，不用自己话表达出来 忽视反馈，不去在实践中进行验证，不去寻求有效反馈  最近做过哪些习惯性防卫 上周研发同事问">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不做日常反思会怎么样-读成甲《好好学习》">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/12/11/%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7-%E8%AF%BB%E6%88%90%E7%94%B2%E3%80%8A%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%E3%80%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="读成甲《好好学习》，带着几个问题思考，亦即思考他人经验于已有何复用之处，或者是有何启发 如何陷入“低水平勤奋陷进” 忽视价值，盲目追求量，每年读个100本书，写10w行easy代码，只求舒适圈量的输入而不去思考有何价值产出 忽视关联，不去深究本质，不去链接已有知识 忽视输出，只摘抄不复述，不用自己话表达出来 忽视反馈，不去在实践中进行验证，不去寻求有效反馈  最近做过哪些习惯性防卫 上周研发同事问">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-11T11:59:06.000Z">
+<meta property="article:modified_time" content="2022-12-11T12:03:39.914Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/12/11/%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7-%E8%AF%BB%E6%88%90%E7%94%B2%E3%80%8A%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%E3%80%8B/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/12/11/%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7-%E8%AF%BB%E6%88%90%E7%94%B2%E3%80%8A%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%E3%80%8B/","path":"2022/12/11/不做日常反思会怎么样-读成甲《好好学习》/","title":"不做日常反思会怎么样-读成甲《好好学习》"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>不做日常反思会怎么样-读成甲《好好学习》 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E9%99%B7%E5%85%A5%E2%80%9C%E4%BD%8E%E6%B0%B4%E5%B9%B3%E5%8B%A4%E5%A5%8B%E9%99%B7%E8%BF%9B%E2%80%9D"><span class="nav-number">1.</span> <span class="nav-text">如何陷入“低水平勤奋陷进”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E8%BF%91%E5%81%9A%E8%BF%87%E5%93%AA%E4%BA%9B%E4%B9%A0%E6%83%AF%E6%80%A7%E9%98%B2%E5%8D%AB"><span class="nav-number">2.</span> <span class="nav-text">最近做过哪些习惯性防卫</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7"><span class="nav-number">3.</span> <span class="nav-text">不做日常反思会怎么样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%8E%BB%E5%81%9A%E4%BB%A5%E6%95%99%E4%B8%BA%E5%AD%A6"><span class="nav-number">4.</span> <span class="nav-text">怎么去做以教为学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%81%9A"><span class="nav-number">5.</span> <span class="nav-text">刻意练习应该怎么做</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8D%E6%80%9D%E6%97%A5%E8%AE%B0%E8%8C%83%E5%9B%B4%EF%BC%88%E6%AF%8F%E6%97%A5%E9%A2%84%E7%95%99%E5%88%B01t%E6%97%B6%E9%97%B4%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">反思日记范围（每日预留到1t时间）</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/12/11/%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7-%E8%AF%BB%E6%88%90%E7%94%B2%E3%80%8A%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="不做日常反思会怎么样-读成甲《好好学习》 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          不做日常反思会怎么样-读成甲《好好学习》
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-11 19:59:06 / Modified: 20:03:39" itemprop="dateCreated datePublished" datetime="2022-12-11T19:59:06+08:00">2022-12-11</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>读成甲《好好学习》，带着几个问题思考，亦即思考他人经验于已有何复用之处，或者是有何启发</p>
+<h1 id="如何陷入“低水平勤奋陷进”"><a href="#如何陷入“低水平勤奋陷进”" class="headerlink" title="如何陷入“低水平勤奋陷进”"></a>如何陷入“低水平勤奋陷进”</h1><ul>
+<li>忽视价值，盲目追求量，每年读个100本书，写10w行easy代码，只求舒适圈量的输入而不去思考有何价值产出</li>
+<li>忽视关联，不去深究本质，不去链接已有知识</li>
+<li>忽视输出，只摘抄不复述，不用自己话表达出来</li>
+<li>忽视反馈，不去在实践中进行验证，不去寻求有效反馈</li>
+</ul>
+<h1 id="最近做过哪些习惯性防卫"><a href="#最近做过哪些习惯性防卫" class="headerlink" title="最近做过哪些习惯性防卫"></a>最近做过哪些习惯性防卫</h1><ul>
+<li>上周研发同事问测试遇到问题是否先排查问题？当即回复是不是在质疑我能力</li>
+<li>上周同组同事录制压测流量咨询问题时，在被给出其思路未解决问题过来再次确认时，马上紧张立刻开始排查，要确认问题就是其操作流程有问题。虽然最终确认开始给出的排查思路是对的，但是未去反思，对于一个新手而言，自己之前输出的操作文档而言是不合格的，应该去改进操作文档使其更有效，而不是排查出问题立马群里反击</li>
+<li>周日科三第一次学习，教练反复提示挂挡，油门踩刹等，因为是偏指导性，自己没什么反驳空间，所以只是偏解释型的习惯性防卫。从事后去反思角度来说，可以去提前网上视频自学下，第一次课的效果会更好些</li>
+</ul>
+<p>故习惯性防卫，虽然是出于本能短时间内改善难度大，但是也是可以改的，如何才能改，首要的就是记录下每日习惯性防卫的场景有哪些，其次花一定时间静心去分析其背后做出此类行为的本质是，即思维方式是什么样的，这种思维方式是正确的吗，如果是存在谬误的，那再从思维到行为到习惯进行改进</p>
+<h1 id="不做日常反思会怎么样"><a href="#不做日常反思会怎么样" class="headerlink" title="不做日常反思会怎么样"></a>不做日常反思会怎么样</h1><ul>
+<li>每日依旧充斥着不合理的假设（预期），与实际差异过大时则沮丧焦虑，或者是跌落至舒适圈享受低水平勤奋带来量的直观感受</li>
+<li>设定的长期目标（如6month的项目目标），缺乏进度条而过早放弃，或对拆分的阶段性里程碑和todo事项缺乏预期实际对照，缺乏有效反馈，从而无法及时调整导致失败</li>
+<li>弊病依旧，在职场生活中被认为是思维固化的人，沟通表达不清晰，难以达到自己预期的目的，抱怨工作和因矛盾去埋怨家庭亲友</li>
+<li>无法聚焦于真正有价值产出的部分，疲于应付琐事急事，满足于低效率的充实，无法形成个人有效竞争力，或者缺乏去做有意义事情的时间</li>
+<li>遇到重大挫折困难手足无措、悔恨不已，导致这种情形其中来自自己的原因的部分，是可以在日常事项中辨识，如果去做好每日反思，及时改进自身的错误假设，和补偿其带来的已有损失，或许就可以扭转导致不利结果的趋势，降低带来的风险和伤害</li>
+</ul>
+<h1 id="怎么去做以教为学"><a href="#怎么去做以教为学" class="headerlink" title="怎么去做以教为学"></a>怎么去做以教为学</h1><ul>
+<li>范围，工作方面将工作思维方式、工作技巧、调研新知识，在组内去传递；生活方面结合自身经验思考沉淀去给出有建设性意见惠及亲友；博文输出启发他人思考</li>
+<li>寻求同频或准同频认知思维的个人团体作为分享对象，这样分享内容的实际反馈更有效，能触发深刻认识快速迭代，如测试思维技能等和组内同事分享，而不是和业务产品其他角色去分享</li>
+<li>不断调研和实践落地，学习掌握有价值的内容，然后去教授给他人，而不是分享一些低价值的东西去浪费他人时间</li>
+<li>前期注意以高频输出打磨技巧，并汲取复用他人已有优秀经验</li>
+</ul>
+<h1 id="刻意练习应该怎么做"><a href="#刻意练习应该怎么做" class="headerlink" title="刻意练习应该怎么做"></a>刻意练习应该怎么做</h1><ul>
+<li>拉伸区的反复实践，有80%的精力时间在拉伸区</li>
+<li>利用反思方式去核对范围和投入，以期改进，可以有个逐步的改进过程</li>
+<li>充分利用暗时间，运用潜意识去强化学习</li>
+<li>在某个需要改进的小范围加速迭代的频次，充分利用复利效应，快速达成自己的预期</li>
+<li>目标的唯一，在项目推进的阶段时刻做减法，降低切换任务导致的专注力转移，能够专注于目标持续精进</li>
+</ul>
+<h1 id="反思日记范围（每日预留到1t时间）"><a href="#反思日记范围（每日预留到1t时间）" class="headerlink" title="反思日记范围（每日预留到1t时间）"></a>反思日记范围（每日预留到1t时间）</h1><ol>
+<li>习惯性防卫事例</li>
+<li>久久萦绕的杂念</li>
+<li>预期与实际存在较大差异的事项</li>
+<li>新认知运用实践的预期与实际分析  、</li>
+</ol>
+<p>目前反思是从自己经验实践去分析、汲取和改进，这种方式有效的话，那必然也可以从他人经验中汲取改进，尤其是从行业领域的精英</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/" rel="prev" title="从零开始搭建思维框架">
+                  <i class="fa fa-angle-left"></i> 从零开始搭建思维框架
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/02/%E6%BC%AB%E7%AC%94%E9%9A%8F%E8%B0%881/" rel="next" title="漫笔随谈1">
+                  漫笔随谈1 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

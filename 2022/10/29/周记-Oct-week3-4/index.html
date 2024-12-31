@@ -1,37 +1,309 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="算法简谈读《算法图解》，除了书中提及的例子，意识到算法在自己现实思考决策亦有关联    递归 迭代，如马斯克关于产品制造观点“做减法，优化，加速”和《黑客与画家》提及的快速做出产品模型；可以运用于明确日常产出，分为一期二期等多期去实现 图遍历 深度遍历，广度遍历；做主题阅读时，往往喜欢寻求书单，其实完全可以从一本好书读起，把其引用的参考书籍入待阅队列，按队列依次广度去读，抑或是从其引用的参考书籍择">
+<meta property="og:type" content="article">
+<meta property="og:title" content="周记-Oct-week3-4">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="算法简谈读《算法图解》，除了书中提及的例子，意识到算法在自己现实思考决策亦有关联    递归 迭代，如马斯克关于产品制造观点“做减法，优化，加速”和《黑客与画家》提及的快速做出产品模型；可以运用于明确日常产出，分为一期二期等多期去实现 图遍历 深度遍历，广度遍历；做主题阅读时，往往喜欢寻求书单，其实完全可以从一本好书读起，把其引用的参考书籍入待阅队列，按队列依次广度去读，抑或是从其引用的参考书籍择">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-29T10:13:20.000Z">
+<meta property="article:modified_time" content="2022-10-29T14:44:12.018Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/","path":"2022/10/29/周记-Oct-week3-4/","title":"周记-Oct-week3-4"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>周记-Oct-week3-4 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%AE%80%E8%B0%88"><span class="nav-number">1.</span> <span class="nav-text">算法简谈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A5%E5%B8%B8%E5%85%B6%E4%BB%96"><span class="nav-number">2.</span> <span class="nav-text">日常其他</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="周记-Oct-week3-4 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          周记-Oct-week3-4
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-29 18:13:20 / Modified: 22:44:12" itemprop="dateCreated datePublished" datetime="2022-10-29T18:13:20+08:00">2022-10-29</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="算法简谈"><a href="#算法简谈" class="headerlink" title="算法简谈"></a>算法简谈</h1><p>读《算法图解》，除了书中提及的例子，意识到算法在自己现实思考决策亦有关联  </p>
+<ul>
+<li>递归 迭代，如马斯克关于产品制造观点“做减法，优化，加速”和《黑客与画家》提及的快速做出产品模型；可以运用于明确日常产出，分为一期二期等多期去实现</li>
+<li>图遍历 深度遍历，广度遍历；做主题阅读时，往往喜欢寻求书单，其实完全可以从一本好书读起，把其引用的参考书籍入待阅队列，按队列依次广度去读，抑或是从其引用的参考书籍择其一二，去读，周而复始，按深度遍历的方式去读；从而可以不必刻意追求书单，给自己徒增压力</li>
+<li>选择排序 每日列出的工作待办清单亦或是日常规划清单，其实无意中去实施时，是选出一项最优先或最紧急的先做（此时需要遍历整个清单），不论执行完整个清单还是部分清单，复杂度O(n²)；至于为什么没选择效率更高的排序方式，那应该就是日常清单事项较少，遍历一遍耗时较低，无需考虑优化排序效率</li>
+<li>贪婪算法 没有最优解只有近似解，就像一场游戏并非只有主线还有支线副本，完全主线必然十分枯燥，然支线副本占用太多精力必然拖慢整体进度；对应到生活来说，已确定的主线支线，将工作和休息除外的8h和周末有没有重点投入主线任务，决定了能否做成一件对他人很有用的事，尤其是能否做成一件边际成本低效益高的事</li>
+<li>树 决策树，日常行为或事项评估若事先拿笔画画决策树，考虑每个叶子节点结果的可承受性，想必会少做很多冲动的事，亦少很多遗憾</li>
+<li>K最近邻算法 推荐算法，特征提取和归类分析；日常亦很有用，论语提及“见贤思齐”，没说怎么样齐平，利用最近邻算法去思考就会简单化，比如我要想向高绩效思齐，那就多关注团队中绩效好的那波人做了什么工作值得借鉴学习，必要时多请教请教；亦或是判断一个圈子或人是否值得接近，多看看这个圈子或她接触的人是什么思维习惯</li>
+<li>分布式算法 亦或是那种服务主从等高可用，对应到生活来说，当职位层次越高，所要承担的责任越大和事项越多，而自己精力有限，怎么凝聚整个团队做更复杂更有价值的事尤为紧要，分布式算法实现原理值得借鉴（by the way，从整个团队来看，即使是有能力能承载更多负载的节点，但是不服从即不够稳定，替换成本可能比排查定位原因再优化成本低多了，好像也理解了领导的抉择，但是绩效威胁的行为是不是太low？）</li>
+<li>布隆过滤器 概率型算法，交流沟通时往往存在自己不是百分百确认的知识，如果担心答错简单回复一句不知道是不适宜的，毕竟有人咨询可能认为你是他认识的在这方面比较了解的人，那这个时候可以根据自己的部分了解给出一些建议回答；另外是如同事工作难点痛点，从自己经验角度及时给出一些建议，虽然这些建议有存在谬误的可能</li>
+<li>线性规划 《经济学原理》首章十大原理便有谈及选择成本，日常工作生活中选择做一件事，便要考虑做这件事的时间精力金钱等等方面可以用来做其它什么事，选择成本是高昂的，所以有些场合即使感性上纠结辗转，也要理性地做出及时止损行为</li>
+</ul>
+<h1 id="日常其他"><a href="#日常其他" class="headerlink" title="日常其他"></a>日常其他</h1><ul>
+<li>登了两次头陀岭，全程约3.5h（13:00出门，15:20登顶，16:30到家）</li>
+<li>看了部《House of the Dragon Season 1》和《Cyberpunk: Edgerunners》；有些矛盾难以避免需提早应对；脑机接口会不会是义体改造的第一步？</li>
+<li>听读《认知觉醒》和《认知驱动》大部分章节，待继续阅读实践（现阶段先坚持博文写下来，是否有价值暂弱化）</li>
+<li>了解下低碳水蔬菜和水果，周末cook已践行低碳水</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/10/25/%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E4%B8%8B%E6%9D%A5/" rel="prev" title="记记记记记下来">
+                  <i class="fa fa-angle-left"></i> 记记记记记下来
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/" rel="next" title="我是怎样被说服做一件事的？">
+                  我是怎样被说服做一件事的？ <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

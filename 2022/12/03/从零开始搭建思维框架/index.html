@@ -1,37 +1,307 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="为什么要搭建思维框架当下工作、生活决策依赖于已有经验，在未涉及或经验薄弱之处手足无措，并且有些经验未有过多高价值的反馈，其准确性不知；故构建自身的思维框架，去主动构建有利于整合输入的认知知识以及倒逼输入，靠思维框架去决策有利于快速迭代，保持与时俱进不固化思维；大量实践也有利于形成对未知事项有分化处理有效评估影响的能力，从而能够从容冷静面对困惑，从多角度高层次看待问题，甚至于长期角度去思考决策，做有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始搭建思维框架">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="为什么要搭建思维框架当下工作、生活决策依赖于已有经验，在未涉及或经验薄弱之处手足无措，并且有些经验未有过多高价值的反馈，其准确性不知；故构建自身的思维框架，去主动构建有利于整合输入的认知知识以及倒逼输入，靠思维框架去决策有利于快速迭代，保持与时俱进不固化思维；大量实践也有利于形成对未知事项有分化处理有效评估影响的能力，从而能够从容冷静面对困惑，从多角度高层次看待问题，甚至于长期角度去思考决策，做有">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-03T12:20:29.000Z">
+<meta property="article:modified_time" content="2022-12-03T12:31:09.677Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/","path":"2022/12/03/从零开始搭建思维框架/","title":"从零开始搭建思维框架"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>从零开始搭建思维框架 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6"><span class="nav-number">1.</span> <span class="nav-text">为什么要搭建思维框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6"><span class="nav-number">2.</span> <span class="nav-text">如何搭建思维框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6%E5%81%9A%E5%93%AA%E4%BA%9B%E4%BA%8B%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">搭建思维框架做哪些事？</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="从零开始搭建思维框架 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          从零开始搭建思维框架
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-03 20:20:29 / Modified: 20:31:09" itemprop="dateCreated datePublished" datetime="2022-12-03T20:20:29+08:00">2022-12-03</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="为什么要搭建思维框架"><a href="#为什么要搭建思维框架" class="headerlink" title="为什么要搭建思维框架"></a>为什么要搭建思维框架</h1><p>当下工作、生活决策依赖于已有经验，在未涉及或经验薄弱之处手足无措，并且有些经验未有过多高价值的反馈，其准确性不知；故构建自身的思维框架，去主动构建有利于整合输入的认知知识以及倒逼输入，靠思维框架去决策有利于快速迭代，保持与时俱进不固化思维；大量实践也有利于形成对未知事项有分化处理有效评估影响的能力，从而能够从容冷静面对困惑，从多角度高层次看待问题，甚至于长期角度去思考决策，做有利于长期利益之事</p>
+<h1 id="如何搭建思维框架"><a href="#如何搭建思维框架" class="headerlink" title="如何搭建思维框架"></a>如何搭建思维框架</h1><p>既然是搭建的操作，便有预计目标，可以用SMART原则指导<br>——S代表具体(Specific)<br>是具体的，一方面是思维框架应用场景，另一方面是底层原则，二者关联做映射，决策实践去验证其有效性</p>
+<ul>
+<li>要搭建什么样的思维框架-能够运用于日常工作生活中各项决策，提升决策效果（结合反思日记和现实实际反馈中实际低于预期频次和严重程度）</li>
+<li>持续多长时间，周期是什么样的-长期，随时update，月&#x2F;季度周期去回顾整合</li>
+<li>达到什么样的效果-能够在遇到未知事项前，不是盲目迎难而上，而是能识别风险有清晰思路掌控住每个环节，或者在出现不利局面时能快速扭转</li>
+</ul>
+<p>——M代表可度量(Measurable)<br>可以度量，将底层原则不断纳入思维框架应用场景，并去反复校验它，最终形成一个清晰完备的思维框架及应用场景和底层原理，哪些场景可以应用哪些底层原则<br>到底什么样才是有效，采用思维框架前后到底有没有差异，以前经验决策中是否蕴含底层原则，能否识别出来并纳入思维框架，在后续同性质或其他场景能否复用？<br>——A代表可实现(Attainable)<br>可以实现，识别过往经验中底层原则+习得他人优秀的经验（模仿，阅读，交谈）+输出实践反馈（给他人带来价值，从实际结果鉴别有效性）<br>——R代表相关性(Relevant)<br>有相关性，一是自我认知提升的重要尝试，二是这是一件能给他人带来价值的事，如果自身可以有效搭建思维框架提升解决困惑能力那便对他人也有借鉴意义<br>——T代表有时限(Time-bound)<br>有时限，每个迭代周期是有时限的，螺旋上升，3个月完成思维框架V1.0搭建，识别或吸收18+个底层原则，完善10+思维框架应用场景梳理，50+细分场景梳理和底层原则映射，在12个细分场景下反复用映射的底层原则去决策执行，并分析其反馈及预期实际差异和待改进部分  </p>
+<h1 id="搭建思维框架做哪些事？"><a href="#搭建思维框架做哪些事？" class="headerlink" title="搭建思维框架做哪些事？"></a>搭建思维框架做哪些事？</h1><ol>
+<li>梳理思维框架应用场景（生活、工作）</li>
+<li>每天思考5-10件事的决策执行中，运用了哪些底层原则，如果没有运用底层原则又是什么原因？</li>
+<li>每周将习得的1-2个底层原则纳入思维框架场景中</li>
+<li>每周关注1-2个场景，采用从经验中识别出的或习得的底层原则，关注每次决策执行过程的反馈如何？</li>
+<li>考虑整个思维框架构建过程中哪些是有价值的部分，如何能复制给其他人？</li>
+<li>如何能教会指导别人也采用思维框架或其中底层原则去处理生活工作场景，提升自我影响力</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/" rel="prev" title="云笔记搬迁">
+                  <i class="fa fa-angle-left"></i> 云笔记搬迁
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/12/11/%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7-%E8%AF%BB%E6%88%90%E7%94%B2%E3%80%8A%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%E3%80%8B/" rel="next" title="不做日常反思会怎么样-读成甲《好好学习》">
+                  不做日常反思会怎么样-读成甲《好好学习》 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

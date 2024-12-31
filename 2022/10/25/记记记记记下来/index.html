@@ -1,37 +1,322 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="记下来今日听读周岭《认知驱动》，一扫浮躁焦虑之感且茅塞顿开；最近二三周心情失落，选择在日记记录下莽撞的想法，但这仅仅是为了宣泄以及清空，而未真正去思考为什么发生了这样的事，在事情中汲取了哪些教训 作者提及写下来的力量  情绪调节；让负面情绪得到缓冲，从而逐步恢复理智，不被情绪束缚做出冲动行为； 专注聚焦；在游离状态下通过写下来的方式快速切入当前任务 行动发动机；预则立不预则废，清单承诺，前后一致推">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记记记记记下来">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/10/25/%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E4%B8%8B%E6%9D%A5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记下来今日听读周岭《认知驱动》，一扫浮躁焦虑之感且茅塞顿开；最近二三周心情失落，选择在日记记录下莽撞的想法，但这仅仅是为了宣泄以及清空，而未真正去思考为什么发生了这样的事，在事情中汲取了哪些教训 作者提及写下来的力量  情绪调节；让负面情绪得到缓冲，从而逐步恢复理智，不被情绪束缚做出冲动行为； 专注聚焦；在游离状态下通过写下来的方式快速切入当前任务 行动发动机；预则立不预则废，清单承诺，前后一致推">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-25T15:22:25.000Z">
+<meta property="article:modified_time" content="2022-10-25T16:36:32.692Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/10/25/%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E4%B8%8B%E6%9D%A5/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/10/25/%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E4%B8%8B%E6%9D%A5/","path":"2022/10/25/记记记记记下来/","title":"记记记记记下来"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>记记记记记下来 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E4%B8%8B%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">记下来</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E8%AE%B0%E4%B8%8B%E6%9D%A5"><span class="nav-number">2.</span> <span class="nav-text">不记下来</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/10/25/%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E4%B8%8B%E6%9D%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="记记记记记下来 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          记记记记记下来
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-10-25 23:22:25" itemprop="dateCreated datePublished" datetime="2022-10-25T23:22:25+08:00">2022-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-26 00:36:32" itemprop="dateModified" datetime="2022-10-26T00:36:32+08:00">2022-10-26</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="记下来"><a href="#记下来" class="headerlink" title="记下来"></a>记下来</h1><p>今日听读周岭《认知驱动》，一扫浮躁焦虑之感且茅塞顿开；最近二三周心情失落，选择在日记记录下莽撞的想法，但这仅仅是为了宣泄以及清空，而未真正去思考为什么发生了这样的事，在事情中汲取了哪些教训</p>
+<p>作者提及写下来的力量</p>
+<ul>
+<li>情绪调节；让负面情绪得到缓冲，从而逐步恢复理智，不被情绪束缚做出冲动行为；</li>
+<li>专注聚焦；在游离状态下通过写下来的方式快速切入当前任务</li>
+<li>行动发动机；预则立不预则废，清单承诺，前后一致推进执行</li>
+<li>目标出发地；假设一个最接近的目标，亦或是罗列出一些后依据价值原则做减法</li>
+<li>思考挖掘；记录困惑强化深度思考，谋求清晰表达</li>
+</ul>
+<p>就我而言，算是一个抽象到具体、模糊到清晰、碎片到全图的过程，将一些零星混乱的思路加工整理成明确的想法，得以复盘原因本质或输出可执行的明细清单  </p>
+<p>为什么出现导致情绪失落的事，汲取了什么教训</p>
+<ul>
+<li>自己认定的想法强灌输给他人，必须“杠赢” ；“拿来”观点沾沾自喜，未实践反而坚信不疑，容不得他人置喙</li>
+<li>放大缺点，忽视他人优点；缺乏包容</li>
+<li>趋易避难；遇到难以掌控局面一再逃避，不敢直面</li>
+<li>曲意迎合，迷失自我；未关注于自身价值影响力或是技能提升，迎合他人浮于表面，忽略价值产出，难以提供有效的价值交换；尤其对应到工作层面，究竟我能为团队创造什么样的价值呢？</li>
+<li>原生家庭性格缺陷，隔代成长，忽视情感维系，父母亲情等付出熟视无睹淡化感激；工作方面不主动关心同事所遇困惑，缺乏耐心答疑，文档一甩不闻不问，意识不到助人实乃助己</li>
+<li>不做充分准备，随便应付，得过且过；自己不珍惜时间，浪费他人时光甚是可耻；周末学习，踩点未铭记浪费教练时间亦导致其心情不愉悦</li>
+</ul>
+<p>行动方面当前已做了哪些</p>
+<ul>
+<li>工作，每周&#x2F;日列出任务清单拆分推进</li>
+<li>生活，借鉴同事整理的项目排期方案和稚晖君的主线支线项目管理方式，梳理出一个主线支线排期表</li>
+</ul>
+<h1 id="不记下来"><a href="#不记下来" class="headerlink" title="不记下来"></a>不记下来</h1><p>想重蹈覆辙，想情绪低落，想思想肤浅，想执行力低下，那就继续不记下来吧</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/10/18/%E5%A6%82%E4%BD%95%E5%B9%B2%E4%B8%8A%E7%97%9B%E8%8B%A6%E7%9A%84%E5%B7%A5%E4%BD%9C/" rel="prev" title="如何干上痛苦的工作">
+                  <i class="fa fa-angle-left"></i> 如何干上痛苦的工作
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/" rel="next" title="周记-Oct-week3-4">
+                  周记-Oct-week3-4 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

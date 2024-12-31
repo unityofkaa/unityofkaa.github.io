@@ -1,37 +1,314 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="最近清理云笔记，发现有两篇19年以前的博文，也迁移过来回首两个长期目标渐行渐远，实在惭愧;云笔记的图片拷贝不出来，有毒      坂上之云所思前两日读《曾国藩家书》，提到专注，与《坂上之云》的信三郎反复提及简简单单异曲同工，由是反思自身，目标不明确，整日忙的乱七八糟，总以为不停歇便是充实，实则自欺欺人曾信有云    凡人做一事，便须全副精神注在此一事，首尾不懈，不可见异思迁，做这样想那样，坐这山望">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云笔记搬迁">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最近清理云笔记，发现有两篇19年以前的博文，也迁移过来回首两个长期目标渐行渐远，实在惭愧;云笔记的图片拷贝不出来，有毒      坂上之云所思前两日读《曾国藩家书》，提到专注，与《坂上之云》的信三郎反复提及简简单单异曲同工，由是反思自身，目标不明确，整日忙的乱七八糟，总以为不停歇便是充实，实则自欺欺人曾信有云    凡人做一事，便须全副精神注在此一事，首尾不懈，不可见异思迁，做这样想那样，坐这山望">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-07T16:06:10.000Z">
+<meta property="article:modified_time" content="2022-11-07T16:19:23.679Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/","path":"2022/11/08/云笔记搬迁/","title":"云笔记搬迁"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>云笔记搬迁 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9D%82%E4%B8%8A%E4%B9%8B%E4%BA%91%E6%89%80%E6%80%9D"><span class="nav-number">1.</span> <span class="nav-text">坂上之云所思</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E4%BD%93%E4%B9%8B%E8%B4%9F%E7%86%B5%E7%9A%84%E5%BC%95%E5%85%A5"><span class="nav-number">2.</span> <span class="nav-text">三体之负熵的引入</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="云笔记搬迁 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          云笔记搬迁
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-11-08 00:06:10 / Modified: 00:19:23" itemprop="dateCreated datePublished" datetime="2022-11-08T00:06:10+08:00">2022-11-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近清理云笔记，发现有两篇19年以前的博文，也迁移过来<br>回首两个长期目标渐行渐远，实在惭愧;云笔记的图片拷贝不出来，有毒     </p>
+<h1 id="坂上之云所思"><a href="#坂上之云所思" class="headerlink" title="坂上之云所思"></a>坂上之云所思</h1><p>前两日读《曾国藩家书》，提到专注，与《坂上之云》的信三郎反复提及简简单单异曲同工，由是反思自身，目标不明确，整日忙的乱七八糟，总以为不停歇便是充实，实则自欺欺人<br>曾信有云  </p>
+<blockquote>
+<p>凡人做一事，便须全副精神注在此一事，首尾不懈，不可见异思迁，做这样想那样，坐这山望那山。人而无恒，终身一无所成</p>
+</blockquote>
+<blockquote>
+<p>书虽不可不看，弟此时以营务为重，则不宜常看书。凡人为一事，以专而精，以纷而散。荀子称耳不两听而聪，目不两视而明，庄子称用志不纷，乃凝于神，皆至言也</p>
+</blockquote>
+<p>《坂上之云》提及</p>
+<blockquote>
+<p>人这一辈子，把一件事做好，其他简简单单，专注于突破自己极限就好</p>
+</blockquote>
+<p>正如信三郎志在建设最强骑兵的国家，淳五郎专研于战事，子规醉心于俳句<br>人精进的过程亦便是排除杂念，明确目标和执行力推进。见贤思齐，没必要过度与他人作比较，亦无需过于在意他人的认同，按自己节奏推进目标的执行即可  </p>
+<p>到底要成为一个什么样的人？<br>而立之年未到，便准备一生就埋头于谋生了么？到底想做什么，只是为了单纯的收入上涨？那真正老去的那天，回首一切，会不会追悔莫及  </p>
+<p>所有的重心，做的所有事（努力）都应该是为了一个目标&#x2F;事，与这个事南辕北辙，或作用甚微的事应戒掉或压根不碰<br>不是去某个企业，拿多少工资，得到多少人的认同&#x3D;&gt;吾不需要通过职业证明什么，应该是职业便于自身一生的追求<br>当前阻力相对低的两个长期目标：<br>1、存储专家（测试方面）<br>2、测试领域专家（技术）<br>但这两个是不是我所追求的？<br>如果作为我的追求目标，可以带来&#x3D;&gt;升职加薪，在职场方面达到匹配的高度，得到些许人的认同<br>但是，真的可以满足于此吗？&#x3D;&gt;实不知，因为当前接触面太窄（知识面、前沿技术了解、职场体系、行业关联），接触的太少，故难以有更精确的认识，未明确想探索的领域和方向<br>如何框定目标？<br>1、通过职业框定目标？<br>2、通过自身经验、接触、能力、兴趣去框定目标？<br>3、通过趋势去框定目标？  </p>
+<p>so，接下来的一段时间，是不是应该将重心放在以下几个方面<br>1、知识面拓展<br>2、前沿技术领域了解（IT、互联网、物联网、大数据、云计算等，甚至于生物方向等等）–趋势<br>3、各职业（各职业的了解）<br>故上面的拓展不需要通过跳槽BAT去了解，跳槽一线互联网也只是和一帮更优秀的人，在测试技术&#x2F;理念&#x2F;研发流程等方面会有收获，只是对阻力相对低的目标有帮助而已<br>也不能过于盲目，先确定一个大致的方向<br>1、测试领域专家&#x3D;&gt;当前谋生阻力最小的奋斗方向<br>2、个人能力精进&#x3D;&gt;哪方面能力？&#x3D;&gt;先增强通识能力（理解力、知识整合、输出-博文&#x2F;演讲分享），so，一句话，亦即是个人影响力的提升  </p>
+<p>知行合一，把今日所思记录下，便于回顾，推进思考，不至于下次又从头开始  </p>
+<h1 id="三体之负熵的引入"><a href="#三体之负熵的引入" class="headerlink" title="三体之负熵的引入"></a>三体之负熵的引入</h1><p>在最近拜读吴军的《硅谷之谜》后，思考叶文洁给三体世界发信号的事件，这个完全可以看做对当前体制系统引入负熵的操作，想要纠正当前系统愈发趋于无序的状态。对负熵与系统本身熵增情况做比较，负熵&gt;&gt;系统熵增，将出现替换原有系统的现象，即三体文明replace地球文明；负熵≈系统熵增，系统稳定趋于有序；负熵&lt;&lt;系统熵增，引入的负熵被原系统同化。又思考到在于职场用人，人才加入陈旧需要变革（如国企）的系统，这里的人才好比负熵，如果负熵和系统熵增不在一个数量级（受个人能力和系统给予的发展空间所限），还要长久在系统内工作，难免最终被同化，这或许也是国有等体制内工作虽然人才不低但作用不大的原因</p>
+<p>一、人物关系  </p>
+
+
+<p>二、剧情<br>（1）汪淼&#x2F;大史–破科学边界成员自杀–介入科学边界（杨冬-&gt;丁仪-&gt;叶文洁，申玉菲-&gt;魏成）<br>（2）汪淼–叶文洁-&gt;杨卫宁&#x2F;雷政委-&gt;红案基地-&gt;与三体世界联系上<br>（3）汪淼– 三体游戏–通关后介入三体组织（潘寒-&gt;降临派-&gt;叶文洁&#x2F;伊文斯）-&gt;纳米网切割第二红案基地，获取三体世界信息<br>结局：智子锁死基础科学发展，三体舰队 on the way  </p>
+<p>三、一些关注点<br>（1）三体游戏（模拟三体世界），与《刀剑神域》脑感游戏类似<br>（2）三体人脱水保存（除冷冻冬眠外另一种保存方式）<br>（3）质子的低维展开（保留高维信息，再收缩成高维）&#x3D;&gt;智子<br>（4）智子锁死基础科学发展，以致地球科学发展加速度&lt;三体世界<br>（5）纳米材料（纳米网切割）–无坚不摧（火攻?）<br>（6）解密文件，不知大刘是否看过类似文件，还是真正的文件类似著作，格式和口语化批示别出心裁<br>（7）魏成的冥想&#x3D;&gt;三体稳定模型（冥想蕴含创造力）<br>（8）逻辑门&#x3D;&gt;人列计算机（还有BUS。。。）<br>（9）“一个高尚的人，一个纯粹的人，一个有道德的人，一个脱离了低级趣味的人”《纪念白求恩》<br>（10）后记中提及，足球比赛简化为二维平面的数学结构模型，进一步思考深蓝&#x2F;阿法狗AlphaGo之类的人工智能计算机在足球&#x2F;篮球&#x2F;台球等的未来发展（配合全息投影&#x2F;人形机器人去实际比赛检验）  </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/" rel="prev" title="我是怎样被说服做一件事的？">
+                  <i class="fa fa-angle-left"></i> 我是怎样被说服做一件事的？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/" rel="next" title="从零开始搭建思维框架">
+                  从零开始搭建思维框架 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

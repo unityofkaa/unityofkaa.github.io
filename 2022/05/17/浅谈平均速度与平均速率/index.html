@@ -1,37 +1,312 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="平均速度与平均速率心血来潮，看了Walter Lewin的《经典力学》，Lesson1中量纲分析和误差醍醐灌顶，此处撇开不谈因课程有提到平均速度和平均速率，结合当前的工作及带教，有一些想法迸发而来，随简单谈谈    首先，回顾下物理知识，平均速度&#x3D;位移&#x2F;时间，平均速率&#x3D;距离&#x2F;时间；位移是矢量，距离为标量；故两者最大区别所在即是“方向” 对应到职业生涯实际工作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈平均速度与平均速率">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/05/17/%E6%B5%85%E8%B0%88%E5%B9%B3%E5%9D%87%E9%80%9F%E5%BA%A6%E4%B8%8E%E5%B9%B3%E5%9D%87%E9%80%9F%E7%8E%87/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="平均速度与平均速率心血来潮，看了Walter Lewin的《经典力学》，Lesson1中量纲分析和误差醍醐灌顶，此处撇开不谈因课程有提到平均速度和平均速率，结合当前的工作及带教，有一些想法迸发而来，随简单谈谈    首先，回顾下物理知识，平均速度&#x3D;位移&#x2F;时间，平均速率&#x3D;距离&#x2F;时间；位移是矢量，距离为标量；故两者最大区别所在即是“方向” 对应到职业生涯实际工作">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-05-17T15:47:30.000Z">
+<meta property="article:modified_time" content="2022-05-17T17:15:19.053Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/05/17/%E6%B5%85%E8%B0%88%E5%B9%B3%E5%9D%87%E9%80%9F%E5%BA%A6%E4%B8%8E%E5%B9%B3%E5%9D%87%E9%80%9F%E7%8E%87/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/05/17/%E6%B5%85%E8%B0%88%E5%B9%B3%E5%9D%87%E9%80%9F%E5%BA%A6%E4%B8%8E%E5%B9%B3%E5%9D%87%E9%80%9F%E7%8E%87/","path":"2022/05/17/浅谈平均速度与平均速率/","title":"浅谈平均速度与平均速率"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>浅谈平均速度与平均速率 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E9%80%9F%E5%BA%A6%E4%B8%8E%E5%B9%B3%E5%9D%87%E9%80%9F%E7%8E%87"><span class="nav-number">1.</span> <span class="nav-text">平均速度与平均速率</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%B8%8E%E6%BD%9C%E5%8A%9B-%E9%AB%98%E8%B4%9F%E8%8D%B7"><span class="nav-number">2.</span> <span class="nav-text">加速度与潜力&amp;高负荷</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/05/17/%E6%B5%85%E8%B0%88%E5%B9%B3%E5%9D%87%E9%80%9F%E5%BA%A6%E4%B8%8E%E5%B9%B3%E5%9D%87%E9%80%9F%E7%8E%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="浅谈平均速度与平均速率 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          浅谈平均速度与平均速率
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-05-17 23:47:30" itemprop="dateCreated datePublished" datetime="2022-05-17T23:47:30+08:00">2022-05-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-18 01:15:19" itemprop="dateModified" datetime="2022-05-18T01:15:19+08:00">2022-05-18</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="平均速度与平均速率"><a href="#平均速度与平均速率" class="headerlink" title="平均速度与平均速率"></a>平均速度与平均速率</h1><p>心血来潮，看了Walter Lewin的《经典力学》，Lesson1中量纲分析和误差醍醐灌顶，此处撇开不谈<br>因课程有提到平均速度和平均速率，结合当前的工作及带教，有一些想法迸发而来，随简单谈谈  </p>
+<ul>
+<li>首先，回顾下物理知识，平均速度&#x3D;位移&#x2F;时间，平均速率&#x3D;距离&#x2F;时间；位移是矢量，距离为标量；故两者最大区别所在即是“方向”</li>
+<li>对应到职业生涯实际工作来说，速率很好理解，用工作年限内完成的项目任务等等去除以这段时间；速度也很好理解，换工作时只有跟求职要求相关的才是有效工作项目经验，加分项</li>
+<li>工作中，有时充实感往往来源某段时间内工作任务完成进度，抱着功不唐捐的想法，偶尔加加班忍不住发个朋友圈自我感动一下；其实归根结底这些都是“距离”层次的积累，在没有合理明确职业发展方向的前提时，所做的事只能算作“苦劳”</li>
+<li>联想到把价值输出放首位的自己，是否清晰的认识到距离和位移的区别，没有明确方向夸夸而谈的输出只能是“距离”量的积累，只有真正有价值的那部分，才是有效的，也是自己真正提升的“位移”，即所谓的“质”；量变到质变纯属侥幸，唯有先聚焦于质后持之以恒才终有“质变”</li>
+<li>对于带教的新人来说，也正是如此，不应该仅关注于最近一段时间完成了几个项目任务，完成了哪些脚本工具，学习掌握了多少知识；而应该把从项目任务完成中收获了什么，脚本工具新知识运用到工作中实际提效的部分，还有哪些场景可以复用，工作方面的学习充电是不是职业岗位方向当前阶段所需要的，这些放在首位；时刻牢记位移与距离本质区别，将有限精力从无用功处剥离</li>
+</ul>
+<h1 id="加速度与潜力-高负荷"><a href="#加速度与潜力-高负荷" class="headerlink" title="加速度与潜力&amp;高负荷"></a>加速度与潜力&amp;高负荷</h1><p>物理所说的加速度，有一个很明显的例子，就是再说汽车的爆发力跑车的性能时会提到几秒钟加速到xx速度之类的，对应到生活上，个人觉得可以对应到一个名词，即潜力</p>
+<ul>
+<li>对于一个职场人，尤其是新人来说，领导同事一个关注点是新人的潜力怎么样，掌握某方面技能熟练度的效率几何；谈及潜力效率，就可以关联上物理学中的“加速度”，如何在短时间内迅速掌握业务流程&amp;工作技能尤为重要</li>
+<li>区别于某些体制内相对稳定闲散的工作，互联网的工作往往会有版本交付的压力，某段时间会迎来高负荷的工作场景，这时候工作内容夹杂着部分有困难有挑战的部分，就需要有快速掌握新技术能力的要求，考量到个人身上，也就是考量自己的职场学习&#x2F;应用&#x2F;管理&#x2F;协调等各方面能力“加速度”究竟几何</li>
+<li>潜力弱能提升吗？很明显是可以的，拿打羽毛球来说，其中很重要的一个是反应能力，这个可以通过其他运动如打篮球等提升；类比到工作中，认真打磨一门编程语言，在新项目需要切换其他语言时，这种底层相同的高相似场景，切换起来并不会太难，应为真正底层的本质是相通的</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>纵观上述，其实不难理解，那些在职场职业生涯岗位上做着有效位移，磨炼加速度的人，往往可以成为骨干核心员工，进而走上管理岗位或成为技术专家</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/14/%E4%BD%A0%E6%98%AF%E5%90%A6%E8%BF%98%E5%9C%A8%E6%8C%81%E7%BB%AD%E8%87%AA%E5%97%A8/" rel="prev" title="你是否还在持续自嗨">
+                  <i class="fa fa-angle-left"></i> 你是否还在持续自嗨
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/05/22/%E6%AF%8F%E6%97%A5%E4%B8%89%E7%9C%81%EF%BC%8C%E5%90%BE%E9%AB%98%E5%90%A6%EF%BC%8C%E5%90%BE%E5%B8%85%E5%90%A6%EF%BC%8C%E5%90%BE%E5%AF%8C%E5%90%A6/" rel="next" title="每日三省，吾高否，吾帅否，吾富否">
+                  每日三省，吾高否，吾帅否，吾富否 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

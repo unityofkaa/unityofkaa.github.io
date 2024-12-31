@@ -1,23 +1,1325 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://unityofkaa.github.io/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://unityofkaa.github.io/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2025/01/01/captain-2024%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/01/captain-2024%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">captain 2024年度总结</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-01-01 03:31:14 / Modified: 04:12:49" itemprop="dateCreated datePublished" datetime="2025-01-01T03:31:14+08:00">2025-01-01</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>652</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>2 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>年度关键字：曙光</p>
+<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><p>上半年对三方&#x2F;风险排查做了系统化的梳理和规划、压测工具的二次开发、实践junit自动化case<br>下半年统筹大促全链路备容，补齐三方自动化case<br>年度最大收获&gt;&gt;”做正确的事，等着被开除”，上班摸鱼看了快3遍的《左耳听风》专栏  </p>
+<h1 id="出行"><a href="#出行" class="headerlink" title="出行"></a>出行</h1><p>二月，登紫金山头陀岭，观雾凇奇观，如入“林海雪原”<br>四月，中旬游淮南寿县，行走于古城墙之上流连忘返，在博物馆满壁辉煌的郢爰下初识楚文化；再登头陀岭；逛全椒吴敬梓故居&#x2F;纪念馆和南屏山<br>五月，登滁州琅琊山；镇江三山一渡、南山之行；老山森林东西线横穿；明城墙环线徒步<br>六月，溪流、竹林、落叶、旧时别墅，德清莫干山；和姐姐外甥外甥女爬句容九连尖，遇打靶行至半路折返<br>七月，登安庆天柱山，云雾缭绕下的雨中穿梭，体会到教员雨中爬上岳麓山顶的快乐<br>九月，登句容宝华山；南京夫子庙景区的city walking（科举博物馆、王谢&#x2F;李香君故居、秦状元府、愚园），第一次了解到有小东林之称的复社<br>十月，登泰山；游览三孔景区，千年圆柏郁郁葱葱<br>十一月，苏州游玩同里古镇、静思园、寒山寺；月底首飞福州，在MM陪伴下品尝了朱富贵，博物馆探寻闽文化历史和留藏在记忆深处的三坊七巷大爱心树<br>十二月，次达福州，和MM逛动物园，次日吃了顿美美的烧烤（期间感冒了怕怕冷）  </p>
+<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>年度阅读406.5小时，日均1小时6分钟；读过358本，读完4本<br>年度最佳图书<a target="_blank" rel="noopener" href="https://book.douban.com/subject/36150423/">《我在北京送快递》</a> <em>细节处品味人生百态，争做不安分的牛马</em>  </p>
+<blockquote>
+<p>当我发现一个人表现得无私时，别人回报他的往往不是友善，而是加倍的贪婪<br>每个人都会以己度人，你永远无法让一个不真诚的人相信你的真诚。反之，你根本没必要向一个真诚的人证明你的真诚</p>
+</blockquote>
+<h1 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h1><p>未记录具体观看剧集数，约摸着在20~50部电影&#x2F;季美剧<br>年度最佳电影<a target="_blank" rel="noopener" href="https://movie.douban.com/subject/35593344/">《奥本海默》</a><br>年度最佳观影感受<a target="_blank" rel="noopener" href="https://movie.douban.com/subject/1309163/">《恋恋笔记本》</a> <em>i want all of you，forever，you and me，every day.</em></p>
+<h1 id="认知"><a href="#认知" class="headerlink" title="认知"></a>认知</h1><h1 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h1><p>黑神话悟空 24.7h</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2023/10/28/%E6%AF%8F%E5%A4%A9%E4%B8%80%E7%AF%87%E8%AE%A4%E7%9F%A5%E5%8D%9A%E6%96%87-231027/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/28/%E6%AF%8F%E5%A4%A9%E4%B8%80%E7%AF%87%E8%AE%A4%E7%9F%A5%E5%8D%9A%E6%96%87-231027/" class="post-title-link" itemprop="url">每天一篇认知博文-231027</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-10-28 00:26:48 / Modified: 01:07:44" itemprop="dateCreated datePublished" datetime="2023-10-28T00:26:48+08:00">2023-10-28</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="认知小课堂"><a href="#认知小课堂" class="headerlink" title="认知小课堂"></a>认知小课堂</h1><p>今日未继续研读认知书籍输入缺失，早上通勤就开启徒步丰富人生体验的想法充分发散，结合地图和旅程耗时探究才发现自身预设限的极不合理，意识到可游览之处繁多</p>
+<ul>
+<li>行万里路，迈出宅生活舒适区<ul>
+<li>当纠结于皖北绕道杭州均要2h+，又跳跃至泰山夜登，查12306沿着旅途望去，一路上可以寻解放战争拦腰截断一字长蛇阵的宿州，观曲阜之孔林孔庙，登泰安的泰山</li>
+<li>向南看发现德清莫干山，湖州长兴，无锡宜兴的竹海尽在高铁里程一小时范围之内</li>
+<li>环顾南京一周，除江浙沪皖外，济南&#x2F;郑州&#x2F;武汉&#x2F;南昌皆在2.5-3.5h辐射范围内，7省加上魔都约300余城皆可周末畅游，前番认识不够畏葸不前，当下要多行多思，大胆出行探知人生</li>
+<li>游城、游山、游景</li>
+</ul>
+</li>
+<li>谨言慎行<ul>
+<li>少说无价值意义的话，不说偏激或评价他人的话</li>
+<li>聚焦于当下手头上的事</li>
+<li>放眼长远，不过于在意当下之得失</li>
+</ul>
+</li>
+<li>世上没有无为之兵，只有无为之将<ul>
+<li>电影《血战台儿庄》德邻对川军加入五战区的评语，职场以及如此，无法推进团队做成一件事何尝不是自身领导力的缺失呢</li>
+</ul>
+</li>
+<li>预则立不预则废<ul>
+<li>认知、事业护城河、人生丰富体验皆不可信马由缰，在预立下充分发挥自由度；目标及产出清晰，里程碑细化</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2023/10/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E7%AF%87%E8%AE%A4%E7%9F%A5%E5%8D%9A%E6%96%87-231026/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E7%AF%87%E8%AE%A4%E7%9F%A5%E5%8D%9A%E6%96%87-231026/" class="post-title-link" itemprop="url">每天一篇认知博文-231026</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-10-26 23:05:56" itemprop="dateCreated datePublished" datetime="2023-10-26T23:05:56+08:00">2023-10-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-10-27 00:23:48" itemprop="dateModified" datetime="2023-10-27T00:23:48+08:00">2023-10-27</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>回顾近期及以往不预则废的日常生活，期望于年底前推进一些事项的落地，于是便开启这每日一篇博文小项目，并借此输出强化思考和促进行动的改变<br>推进事项  </p>
+<ul>
+<li>认知提升，高效决策和行动  </li>
+<li>拓深事业护城河，稳定收入来源支持开销和应急（编程和外语等）</li>
+<li>人生丰富体验（有限的一生体验丰富的生活，了解世界的丰富多彩）</li>
+</ul>
+<h1 id="如何完成每日一篇认知博文"><a href="#如何完成每日一篇认知博文" class="headerlink" title="如何完成每日一篇认知博文"></a>如何完成每日一篇认知博文</h1><ul>
+<li>固定的输入时间，充分输入是有质量的输出前提（如每日上下班通勤时间+午休部分时间等）</li>
+<li>借鉴“熔断不读书法”，发掘一个与以往认知冲突或触动自己的点，拓展由点及面，完成博文内容的充实和后续实践</li>
+<li>笔记整理，使用幕布思维导图式APP，随时记下灵感与归纳，思考与总结；作为当日博文的重要素材</li>
+<li>坚持写下来，无需上来就关注对他人是否有价值，最关键的是帮助自身完成知识积累，认知迭代，先助己再助人，对自己能提供有效帮助的，自然也能为像自己一样仍在认知学习路上的人有帮助</li>
+<li>奖励，每个里程碑的达成给予自身一个切实的激励；</li>
+<li>时刻明确自己目标，为什么要投入时间做这件事，它的机会成本是什么样？有其他更值得去做的事情吗</li>
+</ul>
+<h1 id="认知小课堂"><a href="#认知小课堂" class="headerlink" title="认知小课堂"></a>认知小课堂</h1><p>自我剖析，缓释焦虑与消除模糊  </p>
+<h2 id="本能脑、情绪脑、理智脑的三重大脑"><a href="#本能脑、情绪脑、理智脑的三重大脑" class="headerlink" title="本能脑、情绪脑、理智脑的三重大脑"></a>本能脑、情绪脑、理智脑的三重大脑</h2><ul>
+<li>由于本能&#x2F;情绪脑的天性，人们往往做出短视的决策和行动，追求趋易避难和急于求成</li>
+<li>在有不符合理智的想法和行为时，陷入自我解释，企图对自身行为欲望合理化</li>
+</ul>
+<h2 id="缓释焦虑"><a href="#缓释焦虑" class="headerlink" title="缓释焦虑"></a>缓释焦虑</h2><ul>
+<li>探焦虑之因<ul>
+<li>想同事做多件事，又急于看到结果</li>
+</ul>
+</li>
+<li>破焦虑之贼<ul>
+<li>正视问题<ul>
+<li>列出产生焦虑的事项，分析其本质，依次行动去解决，而不是避而远之，逃避问题</li>
+</ul>
+</li>
+<li>节奏可控<ul>
+<li>拉伸区边缘着力，过易低水平勤奋提升有限，过难遭遇挫折止步不前</li>
+</ul>
+</li>
+<li>成事<ul>
+<li>要事优先</li>
+<li>做减法，一段时间内只聚焦于一件事</li>
+<li>价值产出导向</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="消除模糊"><a href="#消除模糊" class="headerlink" title="消除模糊"></a>消除模糊</h2><p>消除模糊，亦即追求确定，能够掌控的状态</p>
+<ul>
+<li>寻模糊之源<ul>
+<li>目标模糊 一日不清晰便挥霍一日</li>
+<li>选择模糊 无视机会成本下的肆意豪赌</li>
+<li>行动模糊 弃马徒步下的横冲直撞</li>
+<li>反馈模糊 是不是做正确的事只有天知道</li>
+</ul>
+</li>
+<li>破模糊之道<ul>
+<li>正视，拆解，实践复盘，迭代</li>
+<li>思堵力行，力竭谋局；无需刻意等想好了再做，做完了再分析；边学边做，边做边想</li>
+<li>用正确姿势投丢的球，比用错误姿势投丢的球更有价值；亦即一件做对的事要学会快速复制，提升影响力和边际收益</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2023/05/02/%E6%BC%AB%E7%AC%94%E9%9A%8F%E8%B0%881/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/05/02/%E6%BC%AB%E7%AC%94%E9%9A%8F%E8%B0%881/" class="post-title-link" itemprop="url">漫笔随谈1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-05-02 21:46:35 / Modified: 22:20:29" itemprop="dateCreated datePublished" datetime="2023-05-02T21:46:35+08:00">2023-05-02</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>约4个多月未更新博客，再次重启，结合近期状况，梳理下接下来目标和计划<br>已经思考到的</p>
+<ul>
+<li>将前一段时间重点关注的领导力，调整为编程技能+认知提升，提升编程能力主要由于当下工作内容的变动，竞争在技能方面以及落地有所突显，强化下自身技能不至于拖后腿，以及培养下核心竞争力</li>
+<li>废话过多，慎言，将精力抽调至阅读输入、产出思考、演讲力训练等</li>
+<li>个人投资中断已久，先从预算上划分出来，然后结合事项投入，实践提效和认知拓展以及锻炼体魄方面着手</li>
+<li>把中长期规划放到高优先级，当下事业再差不过换同质工作，降低短期利益预期，放长远眼光</li>
+<li>充分利用起通勤时间，有目标性的拓展视野提升技能</li>
+<li>输出一系列技术文档，利用费曼原理，教即是学，强化自身能力提升，并过程中惠及他人</li>
+</ul>
+<p>已经开始做的  </p>
+<ul>
+<li>首先，一是开启目前的半月冲刺计划，对标上工作敏捷的双周计划，有冲刺目标+复盘推进个人提升和目标达成</li>
+<li>迁移恢复博客，后续勤耕博文，思维发散收敛，实践反馈复盘，优化决策输出有价值产物</li>
+</ul>
+<p>需要注意的点</p>
+<ul>
+<li>借鉴他人在落地复杂项目的过程中，人力调配、资源获取、产出博弈、目标制定等等方面的考量，我有无可能踩同样的坑，该如何应对？</li>
+<li>交待任务，要做到何人何时何地为什么做何事的5w原则，说清楚意义</li>
+<li>凡事预则立不预则废，树立明确的目标，先从拆分的阶段性任务去培养成事的能力，反思递进，然后方可临大事不慌，否则都是装腔作势，眼高手低还洋洋得意</li>
+<li>不急于一时，先从一些事情开始做，从一些书开始读，从一些例子开始借鉴，自我得失，他人成败，皆宜反思</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/12/11/%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7-%E8%AF%BB%E6%88%90%E7%94%B2%E3%80%8A%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/11/%E4%B8%8D%E5%81%9A%E6%97%A5%E5%B8%B8%E5%8F%8D%E6%80%9D%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7-%E8%AF%BB%E6%88%90%E7%94%B2%E3%80%8A%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%E3%80%8B/" class="post-title-link" itemprop="url">不做日常反思会怎么样-读成甲《好好学习》</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-11 19:59:06 / Modified: 20:03:39" itemprop="dateCreated datePublished" datetime="2022-12-11T19:59:06+08:00">2022-12-11</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>读成甲《好好学习》，带着几个问题思考，亦即思考他人经验于已有何复用之处，或者是有何启发</p>
+<h1 id="如何陷入“低水平勤奋陷进”"><a href="#如何陷入“低水平勤奋陷进”" class="headerlink" title="如何陷入“低水平勤奋陷进”"></a>如何陷入“低水平勤奋陷进”</h1><ul>
+<li>忽视价值，盲目追求量，每年读个100本书，写10w行easy代码，只求舒适圈量的输入而不去思考有何价值产出</li>
+<li>忽视关联，不去深究本质，不去链接已有知识</li>
+<li>忽视输出，只摘抄不复述，不用自己话表达出来</li>
+<li>忽视反馈，不去在实践中进行验证，不去寻求有效反馈</li>
+</ul>
+<h1 id="最近做过哪些习惯性防卫"><a href="#最近做过哪些习惯性防卫" class="headerlink" title="最近做过哪些习惯性防卫"></a>最近做过哪些习惯性防卫</h1><ul>
+<li>上周研发同事问测试遇到问题是否先排查问题？当即回复是不是在质疑我能力</li>
+<li>上周同组同事录制压测流量咨询问题时，在被给出其思路未解决问题过来再次确认时，马上紧张立刻开始排查，要确认问题就是其操作流程有问题。虽然最终确认开始给出的排查思路是对的，但是未去反思，对于一个新手而言，自己之前输出的操作文档而言是不合格的，应该去改进操作文档使其更有效，而不是排查出问题立马群里反击</li>
+<li>周日科三第一次学习，教练反复提示挂挡，油门踩刹等，因为是偏指导性，自己没什么反驳空间，所以只是偏解释型的习惯性防卫。从事后去反思角度来说，可以去提前网上视频自学下，第一次课的效果会更好些</li>
+</ul>
+<p>故习惯性防卫，虽然是出于本能短时间内改善难度大，但是也是可以改的，如何才能改，首要的就是记录下每日习惯性防卫的场景有哪些，其次花一定时间静心去分析其背后做出此类行为的本质是，即思维方式是什么样的，这种思维方式是正确的吗，如果是存在谬误的，那再从思维到行为到习惯进行改进</p>
+<h1 id="不做日常反思会怎么样"><a href="#不做日常反思会怎么样" class="headerlink" title="不做日常反思会怎么样"></a>不做日常反思会怎么样</h1><ul>
+<li>每日依旧充斥着不合理的假设（预期），与实际差异过大时则沮丧焦虑，或者是跌落至舒适圈享受低水平勤奋带来量的直观感受</li>
+<li>设定的长期目标（如6month的项目目标），缺乏进度条而过早放弃，或对拆分的阶段性里程碑和todo事项缺乏预期实际对照，缺乏有效反馈，从而无法及时调整导致失败</li>
+<li>弊病依旧，在职场生活中被认为是思维固化的人，沟通表达不清晰，难以达到自己预期的目的，抱怨工作和因矛盾去埋怨家庭亲友</li>
+<li>无法聚焦于真正有价值产出的部分，疲于应付琐事急事，满足于低效率的充实，无法形成个人有效竞争力，或者缺乏去做有意义事情的时间</li>
+<li>遇到重大挫折困难手足无措、悔恨不已，导致这种情形其中来自自己的原因的部分，是可以在日常事项中辨识，如果去做好每日反思，及时改进自身的错误假设，和补偿其带来的已有损失，或许就可以扭转导致不利结果的趋势，降低带来的风险和伤害</li>
+</ul>
+<h1 id="怎么去做以教为学"><a href="#怎么去做以教为学" class="headerlink" title="怎么去做以教为学"></a>怎么去做以教为学</h1><ul>
+<li>范围，工作方面将工作思维方式、工作技巧、调研新知识，在组内去传递；生活方面结合自身经验思考沉淀去给出有建设性意见惠及亲友；博文输出启发他人思考</li>
+<li>寻求同频或准同频认知思维的个人团体作为分享对象，这样分享内容的实际反馈更有效，能触发深刻认识快速迭代，如测试思维技能等和组内同事分享，而不是和业务产品其他角色去分享</li>
+<li>不断调研和实践落地，学习掌握有价值的内容，然后去教授给他人，而不是分享一些低价值的东西去浪费他人时间</li>
+<li>前期注意以高频输出打磨技巧，并汲取复用他人已有优秀经验</li>
+</ul>
+<h1 id="刻意练习应该怎么做"><a href="#刻意练习应该怎么做" class="headerlink" title="刻意练习应该怎么做"></a>刻意练习应该怎么做</h1><ul>
+<li>拉伸区的反复实践，有80%的精力时间在拉伸区</li>
+<li>利用反思方式去核对范围和投入，以期改进，可以有个逐步的改进过程</li>
+<li>充分利用暗时间，运用潜意识去强化学习</li>
+<li>在某个需要改进的小范围加速迭代的频次，充分利用复利效应，快速达成自己的预期</li>
+<li>目标的唯一，在项目推进的阶段时刻做减法，降低切换任务导致的专注力转移，能够专注于目标持续精进</li>
+</ul>
+<h1 id="反思日记范围（每日预留到1t时间）"><a href="#反思日记范围（每日预留到1t时间）" class="headerlink" title="反思日记范围（每日预留到1t时间）"></a>反思日记范围（每日预留到1t时间）</h1><ol>
+<li>习惯性防卫事例</li>
+<li>久久萦绕的杂念</li>
+<li>预期与实际存在较大差异的事项</li>
+<li>新认知运用实践的预期与实际分析  、</li>
+</ol>
+<p>目前反思是从自己经验实践去分析、汲取和改进，这种方式有效的话，那必然也可以从他人经验中汲取改进，尤其是从行业领域的精英</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/03/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%80%9D%E7%BB%B4%E6%A1%86%E6%9E%B6/" class="post-title-link" itemprop="url">从零开始搭建思维框架</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-03 20:20:29 / Modified: 20:31:09" itemprop="dateCreated datePublished" datetime="2022-12-03T20:20:29+08:00">2022-12-03</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="为什么要搭建思维框架"><a href="#为什么要搭建思维框架" class="headerlink" title="为什么要搭建思维框架"></a>为什么要搭建思维框架</h1><p>当下工作、生活决策依赖于已有经验，在未涉及或经验薄弱之处手足无措，并且有些经验未有过多高价值的反馈，其准确性不知；故构建自身的思维框架，去主动构建有利于整合输入的认知知识以及倒逼输入，靠思维框架去决策有利于快速迭代，保持与时俱进不固化思维；大量实践也有利于形成对未知事项有分化处理有效评估影响的能力，从而能够从容冷静面对困惑，从多角度高层次看待问题，甚至于长期角度去思考决策，做有利于长期利益之事</p>
+<h1 id="如何搭建思维框架"><a href="#如何搭建思维框架" class="headerlink" title="如何搭建思维框架"></a>如何搭建思维框架</h1><p>既然是搭建的操作，便有预计目标，可以用SMART原则指导<br>——S代表具体(Specific)<br>是具体的，一方面是思维框架应用场景，另一方面是底层原则，二者关联做映射，决策实践去验证其有效性</p>
+<ul>
+<li>要搭建什么样的思维框架-能够运用于日常工作生活中各项决策，提升决策效果（结合反思日记和现实实际反馈中实际低于预期频次和严重程度）</li>
+<li>持续多长时间，周期是什么样的-长期，随时update，月&#x2F;季度周期去回顾整合</li>
+<li>达到什么样的效果-能够在遇到未知事项前，不是盲目迎难而上，而是能识别风险有清晰思路掌控住每个环节，或者在出现不利局面时能快速扭转</li>
+</ul>
+<p>——M代表可度量(Measurable)<br>可以度量，将底层原则不断纳入思维框架应用场景，并去反复校验它，最终形成一个清晰完备的思维框架及应用场景和底层原理，哪些场景可以应用哪些底层原则<br>到底什么样才是有效，采用思维框架前后到底有没有差异，以前经验决策中是否蕴含底层原则，能否识别出来并纳入思维框架，在后续同性质或其他场景能否复用？<br>——A代表可实现(Attainable)<br>可以实现，识别过往经验中底层原则+习得他人优秀的经验（模仿，阅读，交谈）+输出实践反馈（给他人带来价值，从实际结果鉴别有效性）<br>——R代表相关性(Relevant)<br>有相关性，一是自我认知提升的重要尝试，二是这是一件能给他人带来价值的事，如果自身可以有效搭建思维框架提升解决困惑能力那便对他人也有借鉴意义<br>——T代表有时限(Time-bound)<br>有时限，每个迭代周期是有时限的，螺旋上升，3个月完成思维框架V1.0搭建，识别或吸收18+个底层原则，完善10+思维框架应用场景梳理，50+细分场景梳理和底层原则映射，在12个细分场景下反复用映射的底层原则去决策执行，并分析其反馈及预期实际差异和待改进部分  </p>
+<h1 id="搭建思维框架做哪些事？"><a href="#搭建思维框架做哪些事？" class="headerlink" title="搭建思维框架做哪些事？"></a>搭建思维框架做哪些事？</h1><ol>
+<li>梳理思维框架应用场景（生活、工作）</li>
+<li>每天思考5-10件事的决策执行中，运用了哪些底层原则，如果没有运用底层原则又是什么原因？</li>
+<li>每周将习得的1-2个底层原则纳入思维框架场景中</li>
+<li>每周关注1-2个场景，采用从经验中识别出的或习得的底层原则，关注每次决策执行过程的反馈如何？</li>
+<li>考虑整个思维框架构建过程中哪些是有价值的部分，如何能复制给其他人？</li>
+<li>如何能教会指导别人也采用思维框架或其中底层原则去处理生活工作场景，提升自我影响力</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/" class="post-title-link" itemprop="url">云笔记搬迁</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-11-08 00:06:10 / Modified: 00:19:23" itemprop="dateCreated datePublished" datetime="2022-11-08T00:06:10+08:00">2022-11-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>最近清理云笔记，发现有两篇19年以前的博文，也迁移过来<br>回首两个长期目标渐行渐远，实在惭愧;云笔记的图片拷贝不出来，有毒     </p>
+<h1 id="坂上之云所思"><a href="#坂上之云所思" class="headerlink" title="坂上之云所思"></a>坂上之云所思</h1><p>前两日读《曾国藩家书》，提到专注，与《坂上之云》的信三郎反复提及简简单单异曲同工，由是反思自身，目标不明确，整日忙的乱七八糟，总以为不停歇便是充实，实则自欺欺人<br>曾信有云  </p>
+<blockquote>
+<p>凡人做一事，便须全副精神注在此一事，首尾不懈，不可见异思迁，做这样想那样，坐这山望那山。人而无恒，终身一无所成</p>
+</blockquote>
+<blockquote>
+<p>书虽不可不看，弟此时以营务为重，则不宜常看书。凡人为一事，以专而精，以纷而散。荀子称耳不两听而聪，目不两视而明，庄子称用志不纷，乃凝于神，皆至言也</p>
+</blockquote>
+<p>《坂上之云》提及</p>
+<blockquote>
+<p>人这一辈子，把一件事做好，其他简简单单，专注于突破自己极限就好</p>
+</blockquote>
+<p>正如信三郎志在建设最强骑兵的国家，淳五郎专研于战事，子规醉心于俳句<br>人精进的过程亦便是排除杂念，明确目标和执行力推进。见贤思齐，没必要过度与他人作比较，亦无需过于在意他人的认同，按自己节奏推进目标的执行即可  </p>
+<p>到底要成为一个什么样的人？<br>而立之年未到，便准备一生就埋头于谋生了么？到底想做什么，只是为了单纯的收入上涨？那真正老去的那天，回首一切，会不会追悔莫及  </p>
+<p>所有的重心，做的所有事（努力）都应该是为了一个目标&#x2F;事，与这个事南辕北辙，或作用甚微的事应戒掉或压根不碰<br>不是去某个企业，拿多少工资，得到多少人的认同&#x3D;&gt;吾不需要通过职业证明什么，应该是职业便于自身一生的追求<br>当前阻力相对低的两个长期目标：<br>1、存储专家（测试方面）<br>2、测试领域专家（技术）<br>但这两个是不是我所追求的？<br>如果作为我的追求目标，可以带来&#x3D;&gt;升职加薪，在职场方面达到匹配的高度，得到些许人的认同<br>但是，真的可以满足于此吗？&#x3D;&gt;实不知，因为当前接触面太窄（知识面、前沿技术了解、职场体系、行业关联），接触的太少，故难以有更精确的认识，未明确想探索的领域和方向<br>如何框定目标？<br>1、通过职业框定目标？<br>2、通过自身经验、接触、能力、兴趣去框定目标？<br>3、通过趋势去框定目标？  </p>
+<p>so，接下来的一段时间，是不是应该将重心放在以下几个方面<br>1、知识面拓展<br>2、前沿技术领域了解（IT、互联网、物联网、大数据、云计算等，甚至于生物方向等等）–趋势<br>3、各职业（各职业的了解）<br>故上面的拓展不需要通过跳槽BAT去了解，跳槽一线互联网也只是和一帮更优秀的人，在测试技术&#x2F;理念&#x2F;研发流程等方面会有收获，只是对阻力相对低的目标有帮助而已<br>也不能过于盲目，先确定一个大致的方向<br>1、测试领域专家&#x3D;&gt;当前谋生阻力最小的奋斗方向<br>2、个人能力精进&#x3D;&gt;哪方面能力？&#x3D;&gt;先增强通识能力（理解力、知识整合、输出-博文&#x2F;演讲分享），so，一句话，亦即是个人影响力的提升  </p>
+<p>知行合一，把今日所思记录下，便于回顾，推进思考，不至于下次又从头开始  </p>
+<h1 id="三体之负熵的引入"><a href="#三体之负熵的引入" class="headerlink" title="三体之负熵的引入"></a>三体之负熵的引入</h1><p>在最近拜读吴军的《硅谷之谜》后，思考叶文洁给三体世界发信号的事件，这个完全可以看做对当前体制系统引入负熵的操作，想要纠正当前系统愈发趋于无序的状态。对负熵与系统本身熵增情况做比较，负熵&gt;&gt;系统熵增，将出现替换原有系统的现象，即三体文明replace地球文明；负熵≈系统熵增，系统稳定趋于有序；负熵&lt;&lt;系统熵增，引入的负熵被原系统同化。又思考到在于职场用人，人才加入陈旧需要变革（如国企）的系统，这里的人才好比负熵，如果负熵和系统熵增不在一个数量级（受个人能力和系统给予的发展空间所限），还要长久在系统内工作，难免最终被同化，这或许也是国有等体制内工作虽然人才不低但作用不大的原因</p>
+<p>一、人物关系  </p>
+
+
+<p>二、剧情<br>（1）汪淼&#x2F;大史–破科学边界成员自杀–介入科学边界（杨冬-&gt;丁仪-&gt;叶文洁，申玉菲-&gt;魏成）<br>（2）汪淼–叶文洁-&gt;杨卫宁&#x2F;雷政委-&gt;红案基地-&gt;与三体世界联系上<br>（3）汪淼– 三体游戏–通关后介入三体组织（潘寒-&gt;降临派-&gt;叶文洁&#x2F;伊文斯）-&gt;纳米网切割第二红案基地，获取三体世界信息<br>结局：智子锁死基础科学发展，三体舰队 on the way  </p>
+<p>三、一些关注点<br>（1）三体游戏（模拟三体世界），与《刀剑神域》脑感游戏类似<br>（2）三体人脱水保存（除冷冻冬眠外另一种保存方式）<br>（3）质子的低维展开（保留高维信息，再收缩成高维）&#x3D;&gt;智子<br>（4）智子锁死基础科学发展，以致地球科学发展加速度&lt;三体世界<br>（5）纳米材料（纳米网切割）–无坚不摧（火攻?）<br>（6）解密文件，不知大刘是否看过类似文件，还是真正的文件类似著作，格式和口语化批示别出心裁<br>（7）魏成的冥想&#x3D;&gt;三体稳定模型（冥想蕴含创造力）<br>（8）逻辑门&#x3D;&gt;人列计算机（还有BUS。。。）<br>（9）“一个高尚的人，一个纯粹的人，一个有道德的人，一个脱离了低级趣味的人”《纪念白求恩》<br>（10）后记中提及，足球比赛简化为二维平面的数学结构模型，进一步思考深蓝&#x2F;阿法狗AlphaGo之类的人工智能计算机在足球&#x2F;篮球&#x2F;台球等的未来发展（配合全息投影&#x2F;人形机器人去实际比赛检验）  </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/" class="post-title-link" itemprop="url">我是怎样被说服做一件事的？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-11-07 21:09:14" itemprop="dateCreated datePublished" datetime="2022-11-07T21:09:14+08:00">2022-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-11-08 00:32:59" itemprop="dateModified" datetime="2022-11-08T00:32:59+08:00">2022-11-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="哎，我是怎样被说服做一件事的？"><a href="#哎，我是怎样被说服做一件事的？" class="headerlink" title="哎，我是怎样被说服做一件事的？"></a>哎，我是怎样被说服做一件事的？</h1><p>今日晨约5时醒，冲澡早饭后逐渐清醒，开启晨读；当翻开书本前就意识到，又是由“急于求成”的想法导致了周日浑浑噩噩的一天，没有实质的输入和实践，便急于成效反馈，故预期不达焦虑不安<br>稍读几章便顿释焦虑，好奇为什么这些文章如此有效，并且我是如何被说服的去接受作者的观点；静心分析一番，发现作者每个观点后都列举出一项项做这件事的好处，而且多从作者自己经验出发实际落地的实践；按这些思维方式及行为去探索实践，带来的好处是切实符合自己利益述求，故而自然并无抵触欣然接受</p>
+<h1 id="哦，那么如何才能说服一个人去做成某件事呢？"><a href="#哦，那么如何才能说服一个人去做成某件事呢？" class="headerlink" title="哦，那么如何才能说服一个人去做成某件事呢？"></a>哦，那么如何才能说服一个人去做成某件事呢？</h1><p>那么如何才能说服一个人去做成某件事呢？或许这其中的核心部分便是私利<br>信息需要传递，也需要沟通交流传递观点，使目标达成，要多人合作，达成某个目标，那不可避免就要在意见不一时求同存异，采用说服的方式，那么说服有哪些场景</p>
+<ul>
+<li>不说服，目标达不成；或者这部分活自己干了</li>
+<li>说服，仅用技巧或情侣间甜言蜜语达成自身目的，不涉及对方私利；当下或许接受了，醒悟时刻倍感受欺骗</li>
+<li>说服，用私利不用委婉技巧；一句“都是为你好”，往往家长教育子女虽说经验丰富建议中肯，但不容易接受且被抵触</li>
+<li>说服，私利+技巧，达成目的</li>
+</ul>
+<p>战国策《触龙说赵太后》是个很好的例子，秦急攻赵，赵氏求救于齐，曰必以长安君为质。长安君为赵威后的小儿子，爱子心切，岂肯为质异国受苦；触龙的进言很巧妙，先是言自身年老，行步饮食关切争取同情；再是荐少子补黑衣之数，以卫王宫，博得爱怜少子共鸣；又是以爱燕后贤于长安君巧设悬念烘云托月，从而最后点出“位尊无功，奉厚无劳，—旦山陵崩，难以自托”的困境，彻底的说服了赵威后；前面铺垫为了点出最后的私利部分，便是今令质齐有功于国，而得自立于赵</p>
+<p>说服常常用于同等沟通，上对下沟通往往交待便是，下对上沟通说服往往需要考虑周全。如臣子对主上进言，韩非的《说难》一文提及了诸多场景很值得细思-太深刻了，佩服（怎么“舔”出层次）</p>
+<ul>
+<li>追求名高说以厚利 -&gt; 进言者被视为节操低下，并受到卑贱待遇，必然会遭人抛弃、被人疏远</li>
+<li>追求厚利说以名高 -&gt; 进言者显得没有心计， 而且脱离实际，其建议也必然不会被采纳</li>
+<li>阴厚利显名高，说以名高 -&gt; 会在表面上采纳进言者的意见，而在实际上疏远进言者</li>
+<li>阴厚利显名高，说以厚利 -&gt; 会在实际上采纳进言者的主张，却在表面上疏远进言者</li>
+<li>知饰所说之所矜而灭其所耻 -&gt; 懂得粉饰他自夸的事而掩盖自耻的事</li>
+<li>有私急也，必以公义示而强之 -&gt; 有私人的急事，就指明是合乎公义的鼓励去做</li>
+<li>其意有下也，然而不能已，说者因为之饰其美，而少其不为也 -&gt; 有卑下念头不能克制，那就粉饰成美好抱怨不去干</li>
+<li>心有高也，而实不能及，说者为之举其过而见其恶，而多其不行也 -&gt; 有过高的企求实际不能达到，就举出此事的缺点揭示坏处，称赞他不去做</li>
+<li>欲矜以智能，则为之举异事之同类者，多为之地，使之资说于我，而佯不知也以资其智 -&gt; 想自夸才智，就为其多举别的事情中同类之事，多给他提供根据，让他从我这里借用说法，而我却假装不知道帮助他自夸才智</li>
+<li>欲内相存之言，则必以美名明之，而微见其合于私利也 -&gt; 想进献与人相安的话，就必须用好的名义阐明它，并暗示他符合其私利</li>
+<li>欲陈危害之事，则显其毁诽而微见其合于私患也 -&gt; 想要陈述危害的事，就名言此事会遭到的毁谤，并暗示对他也有害处</li>
+<li>誉异人与同行者，规异事与同计者 -&gt; 称赞另一个与他行为相同的人，规划另一件与他考虑相同的事</li>
+<li>有与同污者，则必以大饰其无伤也 -&gt; 有和他污行相同的，就必须对它大加粉饰说它没有害处</li>
+<li>有与同败者，则必以明饰其无失也 -&gt; 有和他败迹相同的，就必须对它明言掩饰，说他没有过失</li>
+<li>毋以其难概之，无以其谪怒之，毋以其败穷之 -&gt; 不用为难的事压抑他，不用过失的事激怒他，不用败绩去困窘他</li>
+<li>二人说者皆当矣，厚者为戮，薄者见疑，则非知之难也，处知则难也 -&gt; 武公伐胡，富人失窃，说的直白被杀，说的间接委婉被猜疑，是处理所了解的情况困难</li>
+<li>弥子之行未变于初也，而以前之所以见贤而后获罪者，爱憎之变也。故有爱于主，则智当而加亲；有憎于主，则智不当见罪而加疏 -&gt; 宠爱时受亲近；弥子瑕色衰爱弛受憎恶时，才智就显得不恰当，遭到谴责而更被疏远</li>
+</ul>
+<p>其实不单单臣子对主公沟通，其实现实生活中弱势对强势，正如感情中处于低位的一样，试图仅靠真诚相待获取信任往往事与愿违，或许唯有察其爱憎兼慎言，旷日离久周泽既渥后方能平等交流；当然也有planB，提升自己或者换个人</p>
+<p>私利到底指的是什么呢？<br>那便是有没有创造价值；给上级创造工作价值，给朋友或恋人创造情绪价值，从而便可影响他人协助自己达成目的；故恰恰说明对会哭的孩子有糖吃存在偏见，会哭的孩子只是让父母有了急切被需要的价值，从而获得所需</p>
+<h1 id="另外随记两点"><a href="#另外随记两点" class="headerlink" title="另外随记两点"></a>另外随记两点</h1><p>两点不相关的想法也记录下来<br>1、荀子的慎言  </p>
+<blockquote>
+<p>故不问而告谓之傲,问一而告二谓之囋  </p>
+</blockquote>
+<p>慎言，急躁和啰嗦都不可取。很有道理，如果是一篇博文内容多，他人大可跳过不读，如果是现实交谈，话多既浪费彼此时间，又可能让他人觉得你啰嗦显摆，或者给其带来被轻视感觉  </p>
+<p>2、梁惠王的反思  </p>
+<blockquote>
+<p>东败于齐,长子死焉;西丧地于秦七百里;南辱于楚  </p>
+</blockquote>
+<p>敢于反思正视自身的人物值得学习，反观自身，造遇困窘时常有掩饰逃避想法念头，实不可取，可以从反思日记着手实施；by the way，梁惠王弃商鞅不用也可以理解，毕竟像公司大了采用激进的方式变革转舵风险太大  </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/" class="post-title-link" itemprop="url">周记-Oct-week3-4</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-29 18:13:20 / Modified: 22:44:12" itemprop="dateCreated datePublished" datetime="2022-10-29T18:13:20+08:00">2022-10-29</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="算法简谈"><a href="#算法简谈" class="headerlink" title="算法简谈"></a>算法简谈</h1><p>读《算法图解》，除了书中提及的例子，意识到算法在自己现实思考决策亦有关联  </p>
+<ul>
+<li>递归 迭代，如马斯克关于产品制造观点“做减法，优化，加速”和《黑客与画家》提及的快速做出产品模型；可以运用于明确日常产出，分为一期二期等多期去实现</li>
+<li>图遍历 深度遍历，广度遍历；做主题阅读时，往往喜欢寻求书单，其实完全可以从一本好书读起，把其引用的参考书籍入待阅队列，按队列依次广度去读，抑或是从其引用的参考书籍择其一二，去读，周而复始，按深度遍历的方式去读；从而可以不必刻意追求书单，给自己徒增压力</li>
+<li>选择排序 每日列出的工作待办清单亦或是日常规划清单，其实无意中去实施时，是选出一项最优先或最紧急的先做（此时需要遍历整个清单），不论执行完整个清单还是部分清单，复杂度O(n²)；至于为什么没选择效率更高的排序方式，那应该就是日常清单事项较少，遍历一遍耗时较低，无需考虑优化排序效率</li>
+<li>贪婪算法 没有最优解只有近似解，就像一场游戏并非只有主线还有支线副本，完全主线必然十分枯燥，然支线副本占用太多精力必然拖慢整体进度；对应到生活来说，已确定的主线支线，将工作和休息除外的8h和周末有没有重点投入主线任务，决定了能否做成一件对他人很有用的事，尤其是能否做成一件边际成本低效益高的事</li>
+<li>树 决策树，日常行为或事项评估若事先拿笔画画决策树，考虑每个叶子节点结果的可承受性，想必会少做很多冲动的事，亦少很多遗憾</li>
+<li>K最近邻算法 推荐算法，特征提取和归类分析；日常亦很有用，论语提及“见贤思齐”，没说怎么样齐平，利用最近邻算法去思考就会简单化，比如我要想向高绩效思齐，那就多关注团队中绩效好的那波人做了什么工作值得借鉴学习，必要时多请教请教；亦或是判断一个圈子或人是否值得接近，多看看这个圈子或她接触的人是什么思维习惯</li>
+<li>分布式算法 亦或是那种服务主从等高可用，对应到生活来说，当职位层次越高，所要承担的责任越大和事项越多，而自己精力有限，怎么凝聚整个团队做更复杂更有价值的事尤为紧要，分布式算法实现原理值得借鉴（by the way，从整个团队来看，即使是有能力能承载更多负载的节点，但是不服从即不够稳定，替换成本可能比排查定位原因再优化成本低多了，好像也理解了领导的抉择，但是绩效威胁的行为是不是太low？）</li>
+<li>布隆过滤器 概率型算法，交流沟通时往往存在自己不是百分百确认的知识，如果担心答错简单回复一句不知道是不适宜的，毕竟有人咨询可能认为你是他认识的在这方面比较了解的人，那这个时候可以根据自己的部分了解给出一些建议回答；另外是如同事工作难点痛点，从自己经验角度及时给出一些建议，虽然这些建议有存在谬误的可能</li>
+<li>线性规划 《经济学原理》首章十大原理便有谈及选择成本，日常工作生活中选择做一件事，便要考虑做这件事的时间精力金钱等等方面可以用来做其它什么事，选择成本是高昂的，所以有些场合即使感性上纠结辗转，也要理性地做出及时止损行为</li>
+</ul>
+<h1 id="日常其他"><a href="#日常其他" class="headerlink" title="日常其他"></a>日常其他</h1><ul>
+<li>登了两次头陀岭，全程约3.5h（13:00出门，15:20登顶，16:30到家）</li>
+<li>看了部《House of the Dragon Season 1》和《Cyberpunk: Edgerunners》；有些矛盾难以避免需提早应对；脑机接口会不会是义体改造的第一步？</li>
+<li>听读《认知觉醒》和《认知驱动》大部分章节，待继续阅读实践（现阶段先坚持博文写下来，是否有价值暂弱化）</li>
+<li>了解下低碳水蔬菜和水果，周末cook已践行低碳水</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/10/25/%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E4%B8%8B%E6%9D%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/25/%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E8%AE%B0%E4%B8%8B%E6%9D%A5/" class="post-title-link" itemprop="url">记记记记记下来</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-10-25 23:22:25" itemprop="dateCreated datePublished" datetime="2022-10-25T23:22:25+08:00">2022-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-26 00:36:32" itemprop="dateModified" datetime="2022-10-26T00:36:32+08:00">2022-10-26</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="记下来"><a href="#记下来" class="headerlink" title="记下来"></a>记下来</h1><p>今日听读周岭《认知驱动》，一扫浮躁焦虑之感且茅塞顿开；最近二三周心情失落，选择在日记记录下莽撞的想法，但这仅仅是为了宣泄以及清空，而未真正去思考为什么发生了这样的事，在事情中汲取了哪些教训</p>
+<p>作者提及写下来的力量</p>
+<ul>
+<li>情绪调节；让负面情绪得到缓冲，从而逐步恢复理智，不被情绪束缚做出冲动行为；</li>
+<li>专注聚焦；在游离状态下通过写下来的方式快速切入当前任务</li>
+<li>行动发动机；预则立不预则废，清单承诺，前后一致推进执行</li>
+<li>目标出发地；假设一个最接近的目标，亦或是罗列出一些后依据价值原则做减法</li>
+<li>思考挖掘；记录困惑强化深度思考，谋求清晰表达</li>
+</ul>
+<p>就我而言，算是一个抽象到具体、模糊到清晰、碎片到全图的过程，将一些零星混乱的思路加工整理成明确的想法，得以复盘原因本质或输出可执行的明细清单  </p>
+<p>为什么出现导致情绪失落的事，汲取了什么教训</p>
+<ul>
+<li>自己认定的想法强灌输给他人，必须“杠赢” ；“拿来”观点沾沾自喜，未实践反而坚信不疑，容不得他人置喙</li>
+<li>放大缺点，忽视他人优点；缺乏包容</li>
+<li>趋易避难；遇到难以掌控局面一再逃避，不敢直面</li>
+<li>曲意迎合，迷失自我；未关注于自身价值影响力或是技能提升，迎合他人浮于表面，忽略价值产出，难以提供有效的价值交换；尤其对应到工作层面，究竟我能为团队创造什么样的价值呢？</li>
+<li>原生家庭性格缺陷，隔代成长，忽视情感维系，父母亲情等付出熟视无睹淡化感激；工作方面不主动关心同事所遇困惑，缺乏耐心答疑，文档一甩不闻不问，意识不到助人实乃助己</li>
+<li>不做充分准备，随便应付，得过且过；自己不珍惜时间，浪费他人时光甚是可耻；周末学习，踩点未铭记浪费教练时间亦导致其心情不愉悦</li>
+</ul>
+<p>行动方面当前已做了哪些</p>
+<ul>
+<li>工作，每周&#x2F;日列出任务清单拆分推进</li>
+<li>生活，借鉴同事整理的项目排期方案和稚晖君的主线支线项目管理方式，梳理出一个主线支线排期表</li>
+</ul>
+<h1 id="不记下来"><a href="#不记下来" class="headerlink" title="不记下来"></a>不记下来</h1><p>想重蹈覆辙，想情绪低落，想思想肤浅，想执行力低下，那就继续不记下来吧</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

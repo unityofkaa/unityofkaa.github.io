@@ -1,37 +1,303 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="三省吾身 每日三省，吾高否，吾帅否，吾富否？ 否，滚回搬砖–路遇骑手送餐盒标语，亦是如此，读论语这么多年，确很少反思日常，反思日记从未实施，故弊病积重难返 又是趋易避难，急于求成的一个周末，重温了《末代皇帝》，翻阅《我的前半生》；看了半部紫金陈的犯罪小说-有点东野圭吾义警复仇故事内核 《量子史话》后半部，关于波粒二象性的波函数坍缩，外界干扰导致的波函数坍缩提到掷骰子最终只有1个状态的例子，思考到双">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日三省，吾高否，吾帅否，吾富否">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/05/22/%E6%AF%8F%E6%97%A5%E4%B8%89%E7%9C%81%EF%BC%8C%E5%90%BE%E9%AB%98%E5%90%A6%EF%BC%8C%E5%90%BE%E5%B8%85%E5%90%A6%EF%BC%8C%E5%90%BE%E5%AF%8C%E5%90%A6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="三省吾身 每日三省，吾高否，吾帅否，吾富否？ 否，滚回搬砖–路遇骑手送餐盒标语，亦是如此，读论语这么多年，确很少反思日常，反思日记从未实施，故弊病积重难返 又是趋易避难，急于求成的一个周末，重温了《末代皇帝》，翻阅《我的前半生》；看了半部紫金陈的犯罪小说-有点东野圭吾义警复仇故事内核 《量子史话》后半部，关于波粒二象性的波函数坍缩，外界干扰导致的波函数坍缩提到掷骰子最终只有1个状态的例子，思考到双">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-05-22T14:05:50.000Z">
+<meta property="article:modified_time" content="2022-05-22T15:41:02.280Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/05/22/%E6%AF%8F%E6%97%A5%E4%B8%89%E7%9C%81%EF%BC%8C%E5%90%BE%E9%AB%98%E5%90%A6%EF%BC%8C%E5%90%BE%E5%B8%85%E5%90%A6%EF%BC%8C%E5%90%BE%E5%AF%8C%E5%90%A6/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/05/22/%E6%AF%8F%E6%97%A5%E4%B8%89%E7%9C%81%EF%BC%8C%E5%90%BE%E9%AB%98%E5%90%A6%EF%BC%8C%E5%90%BE%E5%B8%85%E5%90%A6%EF%BC%8C%E5%90%BE%E5%AF%8C%E5%90%A6/","path":"2022/05/22/每日三省，吾高否，吾帅否，吾富否/","title":"每日三省，吾高否，吾帅否，吾富否"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>每日三省，吾高否，吾帅否，吾富否 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E7%9C%81%E5%90%BE%E8%BA%AB"><span class="nav-number">1.</span> <span class="nav-text">三省吾身</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%96%E6%9E%90%E8%87%AA%E5%B7%B1"><span class="nav-number">2.</span> <span class="nav-text">剖析自己</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/05/22/%E6%AF%8F%E6%97%A5%E4%B8%89%E7%9C%81%EF%BC%8C%E5%90%BE%E9%AB%98%E5%90%A6%EF%BC%8C%E5%90%BE%E5%B8%85%E5%90%A6%EF%BC%8C%E5%90%BE%E5%AF%8C%E5%90%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="每日三省，吾高否，吾帅否，吾富否 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          每日三省，吾高否，吾帅否，吾富否
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-05-22 22:05:50 / Modified: 23:41:02" itemprop="dateCreated datePublished" datetime="2022-05-22T22:05:50+08:00">2022-05-22</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h1><ul>
+<li>每日三省，吾高否，吾帅否，吾富否？ 否，滚回搬砖–路遇骑手送餐盒标语，亦是如此，读论语这么多年，确很少反思日常，反思日记从未实施，故弊病积重难返</li>
+<li>又是趋易避难，急于求成的一个周末，重温了《末代皇帝》，翻阅《我的前半生》；看了半部紫金陈的犯罪小说-有点东野圭吾义警复仇故事内核</li>
+<li>《量子史话》后半部，关于波粒二象性的波函数坍缩，外界干扰导致的波函数坍缩提到掷骰子最终只有1个状态的例子，思考到双缝实验或许只是捕捉到更高维度在三维的投射而已，某个位置仅有唯一静态结果</li>
+<li>《孟子》重温了卷一卷二，“定于一”似乎仍是earth“恶乎定”的唯一解；“无恒产而有恒心者，惟士为能。若民，则无恒产，因无恒心。苟无恒心，放辟邪侈，无不为已。及陷于罪，然后从而刑之，是罔民也。”，扶贫、私产保障的重要性；“权，然后知轻重；度，然后知长短。物皆然，心为甚”，探索式永不过时</li>
+<li>《漫长的告别》、《文化苦旅》略读一点，失兴趣</li>
+<li>百家湖览龙舟划行，不知端午是否有活动比赛</li>
+</ul>
+<h1 id="剖析自己"><a href="#剖析自己" class="headerlink" title="剖析自己"></a>剖析自己</h1><ul>
+<li>工作APP信息查看不及时，下午消息晚上才回复；团队中非自身负责工作内容，第一时间想着推卸，或找研发解决，逃避心态占据要位；临时变动事项未考虑周全联动结果及时解决问题</li>
+<li>无明确target，完全凭兴趣随意游览，泛泛而读，于认知深度无有效提升，时间效率密度低，继续以琐事肆无忌惮填充生活，缺乏动力</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/17/%E6%B5%85%E8%B0%88%E5%B9%B3%E5%9D%87%E9%80%9F%E5%BA%A6%E4%B8%8E%E5%B9%B3%E5%9D%87%E9%80%9F%E7%8E%87/" rel="prev" title="浅谈平均速度与平均速率">
+                  <i class="fa fa-angle-left"></i> 浅谈平均速度与平均速率
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/05/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="next" title="软件测试面试题">
+                  软件测试面试题 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

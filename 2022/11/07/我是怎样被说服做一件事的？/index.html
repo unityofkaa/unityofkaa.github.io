@@ -1,37 +1,338 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"unityofkaa.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="哎，我是怎样被说服做一件事的？今日晨约5时醒，冲澡早饭后逐渐清醒，开启晨读；当翻开书本前就意识到，又是由“急于求成”的想法导致了周日浑浑噩噩的一天，没有实质的输入和实践，便急于成效反馈，故预期不达焦虑不安稍读几章便顿释焦虑，好奇为什么这些文章如此有效，并且我是如何被说服的去接受作者的观点；静心分析一番，发现作者每个观点后都列举出一项项做这件事的好处，而且多从作者自己经验出发实际落地的实践；按这些思">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我是怎样被说服做一件事的？">
+<meta property="og:url" content="https://unityofkaa.github.io/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="哎，我是怎样被说服做一件事的？今日晨约5时醒，冲澡早饭后逐渐清醒，开启晨读；当翻开书本前就意识到，又是由“急于求成”的想法导致了周日浑浑噩噩的一天，没有实质的输入和实践，便急于成效反馈，故预期不达焦虑不安稍读几章便顿释焦虑，好奇为什么这些文章如此有效，并且我是如何被说服的去接受作者的观点；静心分析一番，发现作者每个观点后都列举出一项项做这件事的好处，而且多从作者自己经验出发实际落地的实践；按这些思">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-07T13:09:14.000Z">
+<meta property="article:modified_time" content="2022-11-07T16:32:59.137Z">
+<meta property="article:author" content="Captain">
+<meta name="twitter:card" content="summary">
 
 
-{% block content %}
+<link rel="canonical" href="https://unityofkaa.github.io/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/">
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://unityofkaa.github.io/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/","path":"2022/11/07/我是怎样被说服做一件事的？/","title":"我是怎样被说服做一件事的？"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>我是怎样被说服做一件事的？ | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%93%8E%EF%BC%8C%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">哎，我是怎样被说服做一件事的？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%93%A6%EF%BC%8C%E9%82%A3%E4%B9%88%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E8%AF%B4%E6%9C%8D%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8E%BB%E5%81%9A%E6%88%90%E6%9F%90%E4%BB%B6%E4%BA%8B%E5%91%A2%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">哦，那么如何才能说服一个人去做成某件事呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%A6%E5%A4%96%E9%9A%8F%E8%AE%B0%E4%B8%A4%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">另外随记两点</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Captain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://unityofkaa.github.io/2022/11/07/%E6%88%91%E6%98%AF%E6%80%8E%E6%A0%B7%E8%A2%AB%E8%AF%B4%E6%9C%8D%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E7%9A%84%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="我是怎样被说服做一件事的？ | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我是怎样被说服做一件事的？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-11-07 21:09:14" itemprop="dateCreated datePublished" datetime="2022-11-07T21:09:14+08:00">2022-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-11-08 00:32:59" itemprop="dateModified" datetime="2022-11-08T00:32:59+08:00">2022-11-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span></span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>NaN:aN</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="哎，我是怎样被说服做一件事的？"><a href="#哎，我是怎样被说服做一件事的？" class="headerlink" title="哎，我是怎样被说服做一件事的？"></a>哎，我是怎样被说服做一件事的？</h1><p>今日晨约5时醒，冲澡早饭后逐渐清醒，开启晨读；当翻开书本前就意识到，又是由“急于求成”的想法导致了周日浑浑噩噩的一天，没有实质的输入和实践，便急于成效反馈，故预期不达焦虑不安<br>稍读几章便顿释焦虑，好奇为什么这些文章如此有效，并且我是如何被说服的去接受作者的观点；静心分析一番，发现作者每个观点后都列举出一项项做这件事的好处，而且多从作者自己经验出发实际落地的实践；按这些思维方式及行为去探索实践，带来的好处是切实符合自己利益述求，故而自然并无抵触欣然接受</p>
+<h1 id="哦，那么如何才能说服一个人去做成某件事呢？"><a href="#哦，那么如何才能说服一个人去做成某件事呢？" class="headerlink" title="哦，那么如何才能说服一个人去做成某件事呢？"></a>哦，那么如何才能说服一个人去做成某件事呢？</h1><p>那么如何才能说服一个人去做成某件事呢？或许这其中的核心部分便是私利<br>信息需要传递，也需要沟通交流传递观点，使目标达成，要多人合作，达成某个目标，那不可避免就要在意见不一时求同存异，采用说服的方式，那么说服有哪些场景</p>
+<ul>
+<li>不说服，目标达不成；或者这部分活自己干了</li>
+<li>说服，仅用技巧或情侣间甜言蜜语达成自身目的，不涉及对方私利；当下或许接受了，醒悟时刻倍感受欺骗</li>
+<li>说服，用私利不用委婉技巧；一句“都是为你好”，往往家长教育子女虽说经验丰富建议中肯，但不容易接受且被抵触</li>
+<li>说服，私利+技巧，达成目的</li>
+</ul>
+<p>战国策《触龙说赵太后》是个很好的例子，秦急攻赵，赵氏求救于齐，曰必以长安君为质。长安君为赵威后的小儿子，爱子心切，岂肯为质异国受苦；触龙的进言很巧妙，先是言自身年老，行步饮食关切争取同情；再是荐少子补黑衣之数，以卫王宫，博得爱怜少子共鸣；又是以爱燕后贤于长安君巧设悬念烘云托月，从而最后点出“位尊无功，奉厚无劳，—旦山陵崩，难以自托”的困境，彻底的说服了赵威后；前面铺垫为了点出最后的私利部分，便是今令质齐有功于国，而得自立于赵</p>
+<p>说服常常用于同等沟通，上对下沟通往往交待便是，下对上沟通说服往往需要考虑周全。如臣子对主上进言，韩非的《说难》一文提及了诸多场景很值得细思-太深刻了，佩服（怎么“舔”出层次）</p>
+<ul>
+<li>追求名高说以厚利 -&gt; 进言者被视为节操低下，并受到卑贱待遇，必然会遭人抛弃、被人疏远</li>
+<li>追求厚利说以名高 -&gt; 进言者显得没有心计， 而且脱离实际，其建议也必然不会被采纳</li>
+<li>阴厚利显名高，说以名高 -&gt; 会在表面上采纳进言者的意见，而在实际上疏远进言者</li>
+<li>阴厚利显名高，说以厚利 -&gt; 会在实际上采纳进言者的主张，却在表面上疏远进言者</li>
+<li>知饰所说之所矜而灭其所耻 -&gt; 懂得粉饰他自夸的事而掩盖自耻的事</li>
+<li>有私急也，必以公义示而强之 -&gt; 有私人的急事，就指明是合乎公义的鼓励去做</li>
+<li>其意有下也，然而不能已，说者因为之饰其美，而少其不为也 -&gt; 有卑下念头不能克制，那就粉饰成美好抱怨不去干</li>
+<li>心有高也，而实不能及，说者为之举其过而见其恶，而多其不行也 -&gt; 有过高的企求实际不能达到，就举出此事的缺点揭示坏处，称赞他不去做</li>
+<li>欲矜以智能，则为之举异事之同类者，多为之地，使之资说于我，而佯不知也以资其智 -&gt; 想自夸才智，就为其多举别的事情中同类之事，多给他提供根据，让他从我这里借用说法，而我却假装不知道帮助他自夸才智</li>
+<li>欲内相存之言，则必以美名明之，而微见其合于私利也 -&gt; 想进献与人相安的话，就必须用好的名义阐明它，并暗示他符合其私利</li>
+<li>欲陈危害之事，则显其毁诽而微见其合于私患也 -&gt; 想要陈述危害的事，就名言此事会遭到的毁谤，并暗示对他也有害处</li>
+<li>誉异人与同行者，规异事与同计者 -&gt; 称赞另一个与他行为相同的人，规划另一件与他考虑相同的事</li>
+<li>有与同污者，则必以大饰其无伤也 -&gt; 有和他污行相同的，就必须对它大加粉饰说它没有害处</li>
+<li>有与同败者，则必以明饰其无失也 -&gt; 有和他败迹相同的，就必须对它明言掩饰，说他没有过失</li>
+<li>毋以其难概之，无以其谪怒之，毋以其败穷之 -&gt; 不用为难的事压抑他，不用过失的事激怒他，不用败绩去困窘他</li>
+<li>二人说者皆当矣，厚者为戮，薄者见疑，则非知之难也，处知则难也 -&gt; 武公伐胡，富人失窃，说的直白被杀，说的间接委婉被猜疑，是处理所了解的情况困难</li>
+<li>弥子之行未变于初也，而以前之所以见贤而后获罪者，爱憎之变也。故有爱于主，则智当而加亲；有憎于主，则智不当见罪而加疏 -&gt; 宠爱时受亲近；弥子瑕色衰爱弛受憎恶时，才智就显得不恰当，遭到谴责而更被疏远</li>
+</ul>
+<p>其实不单单臣子对主公沟通，其实现实生活中弱势对强势，正如感情中处于低位的一样，试图仅靠真诚相待获取信任往往事与愿违，或许唯有察其爱憎兼慎言，旷日离久周泽既渥后方能平等交流；当然也有planB，提升自己或者换个人</p>
+<p>私利到底指的是什么呢？<br>那便是有没有创造价值；给上级创造工作价值，给朋友或恋人创造情绪价值，从而便可影响他人协助自己达成目的；故恰恰说明对会哭的孩子有糖吃存在偏见，会哭的孩子只是让父母有了急切被需要的价值，从而获得所需</p>
+<h1 id="另外随记两点"><a href="#另外随记两点" class="headerlink" title="另外随记两点"></a>另外随记两点</h1><p>两点不相关的想法也记录下来<br>1、荀子的慎言  </p>
+<blockquote>
+<p>故不问而告谓之傲,问一而告二谓之囋  </p>
+</blockquote>
+<p>慎言，急躁和啰嗦都不可取。很有道理，如果是一篇博文内容多，他人大可跳过不读，如果是现实交谈，话多既浪费彼此时间，又可能让他人觉得你啰嗦显摆，或者给其带来被轻视感觉  </p>
+<p>2、梁惠王的反思  </p>
+<blockquote>
+<p>东败于齐,长子死焉;西丧地于秦七百里;南辱于楚  </p>
+</blockquote>
+<p>敢于反思正视自身的人物值得学习，反观自身，造遇困窘时常有掩饰逃避想法念头，实不可取，可以从反思日记着手实施；by the way，梁惠王弃商鞅不用也可以理解，毕竟像公司大了采用激进的方式变革转舵风险太大  </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/10/29/%E5%91%A8%E8%AE%B0-Oct-week3-4/" rel="prev" title="周记-Oct-week3-4">
+                  <i class="fa fa-angle-left"></i> 周记-Oct-week3-4
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/11/08/%E4%BA%91%E7%AC%94%E8%AE%B0%E6%90%AC%E8%BF%81/" rel="next" title="云笔记搬迁">
+                  云笔记搬迁 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Captain</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
